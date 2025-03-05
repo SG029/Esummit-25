@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Timer = () => {
+
   const calculateTimeLeft = () => {
     const eventDate = new Date('March 21, 2024 00:00:00');
     const currentTime = new Date();

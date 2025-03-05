@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import "./App.css";
 import Hero from "./Hero";
@@ -39,6 +40,7 @@ function App() {
   }, []);
 
   return (
+
     <div className="relative">
       {/* Magnetic Cursor */}
       <motion.div
@@ -65,6 +67,7 @@ function App() {
       <Hero />
     </div>
   );
+
 }
 
 export default App;
