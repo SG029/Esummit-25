@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { BiChevronRight } from "react-icons/bi";
 
@@ -28,16 +28,3 @@ function Register() {
 }
 
 export default Register;
-=======
-function Register() {
-    return (
-        <div className="bg-red">
-            <button className = " text-white font-bold py-2 px-4 rounded-full">
-                Register
-            </button>
-        </div>
-    )
-}
-
-export default Register
->>>>>>> a9adcf86c683abb7d139f50968504ab3fc50494e
