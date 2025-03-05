@@ -1,1 +1,50 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "mermalede";
+  src: url("./assets/fonts/marmalede.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "fonseca";
+  src: url("./assets/fonts/fonseca/Fonseca-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "opensanslight";
+  src: url("./assets/fonts/OpenSans-CondLight.ttf") format("opentype");
+  font-style: normal;
+  font-weight: light;
+}
+@font-face {
+  font-family: "opensansbold";
+  src: url("./assets/fonts/OpenSans-CondBold.ttf") format("opentype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Add Tailwind utility for custom fonts */
+.font-mermalede {
+  font-family: "mermalede", sans-serif;
+}
+
+.font-fonseca {
+  font-family: "fonseca", sans-serif;
+}
+.font-fonseca {
+  font-family: "opensanslight", sans-serif;
+}
+.font-fonseca {
+  font-family: "opensansbold", sans-serif;
+}
+
+
+.clip-path-diagonal {
+  clip-path: polygon(0% 100%, 0% 100%, 100% 0%, 100% 0%);
+}
+.group:hover .clip-path-diagonal {
+  clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+}
