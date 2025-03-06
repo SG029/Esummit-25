@@ -27,7 +27,7 @@ function Register() {
       rel="noopener noreferrer"
       className="no-underline"
     >
-      <div className={`relative overflow-hidden group flex items-center gap-0 hover:gap-4 transition-all duration-500 px-8 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[3vw] sm:text-[4vw]`}>
+      <div className={`relative overflow-hidden group flex items-center gap-0 hover:gap-6 transition-all duration-1000 px-6 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[1.7vw] sm:text-[4vw]`}>
         {/* Animated Overlay */}
         <div className="absolute inset-0 bg-white rounded-full h-[30vw] w-[40vw] 
           transform -translate-x-full translate-y-0 
@@ -35,10 +35,10 @@ function Register() {
         </div>
 
         {/* Register Text & Icon */}
-        <span className={`relative transition-all duration-[0ms] group-hover:text-[#AA1E0F] z-10`}>
+        <span className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F] z-10`}>
           Register Now
         </span>
-        <BiChevronRight className={`relative transition-all duration-[1200ms] group-hover:text-[#AA1E0F] z-10 ${isMobile ? 'text-[8vw]' : 'text-[3vw]'} md:text-[4vw] sm:text-[5vw]`} />
+        <BiChevronRight className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F] z-10 ${isMobile ? 'text-[8vw]' : 'text-[3vw]'} md:text-[3vw] sm:text-[5vw]`} />
       </div>
     </a>
   );

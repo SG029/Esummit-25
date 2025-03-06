@@ -13,17 +13,19 @@
   font-style: normal;
   font-weight: normal;
 }
+
 @font-face {
   font-family: "opensanslight";
-  src: url("./assets/fonts/OpenSans-CondLight.ttf") format("opentype");
+  src: url("./assets/fonts/OpenSans-CondLight.ttf") format("truetype");
   font-style: normal;
-  font-weight: light;
+  font-weight: 300; /* Light weight */
 }
+
 @font-face {
   font-family: "opensansbold";
-  src: url("./assets/fonts/OpenSans-CondBold.ttf") format("opentype");
+  src: url("./assets/fonts/OpenSans-CondBold.ttf") format("truetype");
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700; /* Bold weight */
 }
 
 /* Add Tailwind utility for custom fonts */
@@ -34,17 +36,20 @@
 .font-fonseca {
   font-family: "fonseca", sans-serif;
 }
-.font-fonseca {
+
+.font-opensanslight {
   font-family: "opensanslight", sans-serif;
 }
-.font-fonseca {
+
+.font-opensansbold {
   font-family: "opensansbold", sans-serif;
 }
 
-
+/* Clip-path utilities */
 .clip-path-diagonal {
   clip-path: polygon(0% 100%, 0% 100%, 100% 0%, 100% 0%);
 }
+
 .group:hover .clip-path-diagonal {
   clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
 }

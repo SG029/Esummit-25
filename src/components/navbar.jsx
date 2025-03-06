@@ -48,7 +48,7 @@ function Navbar() {
             isHamburgerVisible
               ? "absolute left-1/2 transform -translate-x-1/2 mt-55 w-50 flex flex-col items-center space-y-4 bg-white text-black p-4 rounded-md shadow-lg"
               : "absolute left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 md:space-x-10"
-          } text-sm sm:text-lg md:text-xl font-opensanslight transition-colors duration-500 whitespace-nowrap`}
+          } text-sm sm:text-lg md:text-[1.5vw] font-opensanslight transition-colors duration-500 whitespace-nowrap`}
         >
           <li className="cursor-pointer hover:text-[#059196]">Home</li>
           <li className="cursor-pointer hover:text-[#059196]">About</li>

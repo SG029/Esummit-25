@@ -60,7 +60,6 @@ function Hero() {
       className="w-screen h-screen bg-[#0A0A0C] text-white flex flex-col items-center justify-center relative bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${herobg})` }}
     >
-      {/* Animated Blue Vector */}
       <motion.img
         src={bluevector}
         alt=""
@@ -70,7 +69,6 @@ function Hero() {
         transition={{ duration: 1.5, ease: "easeOut" }} // Smooth animation
         style={{ height: "calc(100vh + 20vh)", width: "calc(100vw + 20vw)" }} // Adjust height and width based on viewport size
       />
-      {/* Animated H1 (Emerges from Bottom) */}
       <motion.h1
         className="text-[16vw] md:text-[10vw] sm:text-[8vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw]"
         initial={{ opacity: 0, y: useIsMobile() ? 50 : 100 }} // Start lower, less distance on mobile
@@ -80,9 +78,8 @@ function Hero() {
         E-SUMMIT 2025
       </motion.h1>
 
-      {/* Animated H2 (Fades in after H1) */}
       <motion.h2
-        className="text-[3.5vw] font-fonseca uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw]"
+        className="font-fonseca uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw] text-[3vw]"
         initial={{ opacity: 0 }} // Only fade-in effect
         animate={{ opacity: 1 }} // Fade in smoothly
         transition={{ duration: 1, ease: "easeOut", delay: 1.3 }} // Delay after H1

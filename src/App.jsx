@@ -1,10 +1,9 @@
-
 import { useState, useEffect } from "react";
 import "./App.css";
 import Hero from "./Hero";
 import { motion } from "framer-motion";
-import { nav } from "framer-motion/client";
 import Navbar from "./components/navbar";
+import About from "./About";
 
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -40,11 +39,10 @@ function App() {
   }, []);
 
   return (
-
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       {/* Magnetic Cursor */}
       <motion.div
-        className="fixed pointer-events-none rounded-full bg-[#059196] z-50"
+        className="cursorrr fixed pointer-events-none rounded-full bg-[#059196] z-50"
         style={{
           mixBlendMode: "difference",
         }}
@@ -65,9 +63,9 @@ function App() {
       {/* Page Content */}
       <Navbar />
       <Hero />
+      <About />
     </div>
   );
-
 }
 
 export default App;
