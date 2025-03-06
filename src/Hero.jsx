@@ -4,6 +4,23 @@ import herobg from "./assets/img/herobg.png";
 import Timer from "./components/timer";
 import Register from "./components/register";
 import bluevector from "./assets/img/Vector 2.png";
+import { useState, useEffect } from "react";
+
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 786);
+      };
+  
+      handleResize(); // Check on mount
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+  
+    return isMobile;
+  }
 
 function TypewriterText({ text, delay }) {
   return (
@@ -51,12 +68,12 @@ function Hero() {
         initial={{ x: "-100vw", y: "-100vh", opacity: 0 }} // Start position (Top-left)
         animate={{ x: 0, y: 0, opacity: 1 }} // Move to final position
         transition={{ duration: 1.5, ease: "easeOut" }} // Smooth animation
+        style={{ height: "calc(100vh + 20vh)", width: "calc(100vw + 20vw)" }} // Adjust height and width based on viewport size
       />
-
       {/* Animated H1 (Emerges from Bottom) */}
       <motion.h1
-        className="text-[12vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)]"
-        initial={{ opacity: 0, y: 100 }} // Start lower
+        className="text-[16vw] md:text-[10vw] sm:text-[8vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw]"
+        initial={{ opacity: 0, y: useIsMobile() ? 50 : 100 }} // Start lower, less distance on mobile
         animate={{ opacity: 1, y: 0 }} // Move up to normal position
         transition={{ duration: 1.2, ease: "easeOut" }} // Smooth animation
       >
@@ -65,7 +82,7 @@ function Hero() {
 
       {/* Animated H2 (Fades in after H1) */}
       <motion.h2
-        className="text-[2.5vw] font-fonseca uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw]"
+        className="text-[3.5vw] font-fonseca uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw]"
         initial={{ opacity: 0 }} // Only fade-in effect
         animate={{ opacity: 1 }} // Fade in smoothly
         transition={{ duration: 1, ease: "easeOut", delay: 1.3 }} // Delay after H1

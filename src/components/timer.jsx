@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import dayjs from 'dayjs';
 
 const Timer = () => {
 
   const calculateTimeLeft = () => {
-    const eventDate = new Date('March 21, 2024 00:00:00');
+    const eventDate = dayjs('2025-03-21');
     const currentTime = new Date();
     const difference = eventDate - currentTime;
 
