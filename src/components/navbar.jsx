@@ -90,7 +90,7 @@ function Navbar() {
       {isHamburgerVisible && (
         <div onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? (
-            <RxCross2 className="text-3xl sm:text-4xl mr-4 sm:mr-5 md:mr-6" />
+            <RxCross2 className="text-3xl sm:text-4xl mr-4 sm:mr-5 md:mr-6 " />
           ) : (
             <RxHamburgerMenu className="text-3xl sm:text-4xl mr-4 sm:mr-5 md:mr-6" />
           )}
