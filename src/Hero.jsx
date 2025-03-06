@@ -57,9 +57,14 @@ function TypewriterText({ text, delay }) {
 function Hero() {
   return (
     <div
-      className="w-screen h-screen bg-[#0A0A0C] text-white flex flex-col items-center justify-center relative bg-cover bg-center overflow-hidden"
-      style={{ backgroundImage: `url(${herobg})` }}
-    >
+              className='w-full h-[110vh] flex flex-col items-center justify-center overflow-hidden'
+              style={{
+                backgroundImage: `url(${herobg})`,
+                backgroundSize: 'cover', // Ensures the image covers the entire container
+                backgroundPosition: 'center', // Centers the image
+                backgroundRepeat: 'no-repeat', // Prevents the image from repeating
+              }}
+            >
       <motion.img
         src={bluevector}
         alt=""

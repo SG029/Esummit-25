@@ -1,0 +1,176 @@
+@media (max-width: 1080px) {
+    .mainn {
+      padding: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:5vw;
+    }
+    .leftside{
+      scale: 0.9;
+    }
+  
+    .leftside .probar-head {
+      font-size: 2.5rem;
+    }
+  
+    .middle .probar-img {
+      width: 12rem;
+    }
+  
+    .rightside {
+      height: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:1vw;
+    }
+    .read-cont{
+      text-align: start;
+      width: 20vw;
+      
+    }
+    .read-probar-more:nth-child(2){
+      display: none;
+    }
+  
+    .rightside img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+  
+  /* For screens 768px and below */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .mainn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4vw;
+    }
+  
+    .leftside {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      min-height: 30vw; /* Ensures enough space for children */
+    }
+  
+    .leftside .probar-desc {
+      width: 100%;
+      font-size: 4vw;
+      line-height: 4vw;
+      text-align: center;
+    }
+  
+    .leftside .probar-head {
+      font-size: 8vw;
+      width: 80vw;
+      height: 20vw;
+      /* background-color: red; */
+      overflow: hidden; /* Prevents content overflow */
+      box-sizing: border-box; /* Ensures width and height include padding */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap; /* Prevents wrapping issues */
+      position: relative;
+      transform: translateY(-30%);
+    }
+  
+    /* Hide second .probar-head */
+    .probar-head:nth-child(2) {
+      display: none;
+    }
+  
+    /* Prevent movement on hover */
+    .mainn:hover .probar-head {
+      transform: translateY(20%); /* Stops any movement */
+    }
+  
+    .middle .probar-img {
+      width: 60vw;
+    }
+  
+    .rightside {
+      height: 1.25rem;
+      padding-bottom: 10vw;
+    }
+  
+    /* Hide second read-probar-more */
+    .read-probar-more:nth-child(2) {
+      display: none;
+    }
+  
+    .rightside img {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    .read-cont{
+      margin-top: 5vw;
+      /* scale: 1.1; */
+      /* overflow: visible; */
+    }
+  }
+  
+  
+  /* For screens 480px and below */
+  @media (max-width: 480px) {
+    .mainn {
+      flex-direction: column;
+      align-items: center;
+      padding: 4vw;
+    }
+    .mainn:hover {
+      background-color: inherit;
+      color: white;
+    }
+
+    .mainn:hover .probar-desc{
+      color: #8B8B8B;
+    }
+
+    .leftside{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .leftside .probar-desc{
+        width: 60%;
+        font-size: 5vw;
+        line-height: 1.3rem;  
+        margin-bottom: 5vw;
+    }
+  
+    .leftside .probar-head {
+      font-size: 8vw;
+    }
+    .probar-head:nth-child(2){
+        display: none;
+    }
+    
+    .mainn:hover .probar-head {
+        transform: translateY(50%);
+    }
+  
+    .middle .probar-img {
+      width: 60vw;
+      margin-bottom: 5vw;
+    }
+  
+    .rightside {
+      height: 1.25rem;
+      padding-bottom: 10vw;
+    }
+    .read-probar-more:nth-child(2){
+        display: none;
+    }
+  
+    .rightside img {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }

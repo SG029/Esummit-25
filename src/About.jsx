@@ -5,7 +5,7 @@ import aboutleft from "./assets/img/aboutleft.png"; // Ensure this path is corre
 function About() {
   return (
     <div
-      className='w-full h-screen flex flex-col items-center justify-center overflow-hidden'
+      className='w-full h-[110vh] flex flex-col items-center justify-center '
       style={{
         backgroundImage: `url(${herobg})`,
         backgroundSize: 'cover', // Ensures the image covers the entire container
@@ -13,7 +13,7 @@ function About() {
         backgroundRepeat: 'no-repeat', // Prevents the image from repeating
       }}
     >
-      <h1 className='text-[4vw] font-bold text-white text-center font-fonseca'>
+      <h1 className='text-[4vw] font-bold text-white text-center font-fonseca mt-[10vw]'>
         ABOUT E-SUMMIT
       </h1>
       <h3 className='w-4/6 text-[2vw] text-center mt-4 text-white font-opensanslight leading-10'>

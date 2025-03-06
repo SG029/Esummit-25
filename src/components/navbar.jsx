@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { RxHamburgerMenu } from "react-icons/rx"; 
+import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
+import Hero from "../Hero";
+import About from "../About";
+import Events from "../Events"; // Import Events instead of Eventslanding
 
-function Navbar() {
+function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [buttonPos, setButtonPos] = useState({ x: 0, y: 0 });
   const getWidth = () => window.innerWidth;
@@ -26,12 +29,38 @@ function Navbar() {
       setIsButtonVisible(width >= 1000);
       setIsHamburgerVisible(width < 1000);
       setIsMenuOpen(width >= 1000);
-
     };
     window.addEventListener("resize", handleResize);
     handleResize(); // Check initial width
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Scroll to Hero section
+  const scrollToHero = () => {
+    if (heroRef.current) {
+      heroRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Scroll to About section
+  const scrollToAbout = () => {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Scroll to Events section
+  const scrollToEvents = () => {
+    if (eventsRef.current) {
+      eventsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+  const scrollToFooter = () => {
+    if (footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full">
       {/* Logo on the left */}
@@ -50,12 +79,20 @@ function Navbar() {
               : "absolute left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 md:space-x-10"
           } text-sm sm:text-lg md:text-[1.5vw] font-opensanslight transition-colors duration-500 whitespace-nowrap`}
         >
-          <li className="cursor-pointer hover:text-[#059196]">Home</li>
-          <li className="cursor-pointer hover:text-[#059196]">About</li>
+          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToHero}>
+            Home
+          </li>
+          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToAbout}>
+            About
+          </li>
+          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToEvents}>
+            Events
+          </li>
           <li className="cursor-pointer hover:text-[#059196]">Speakers</li>
-          <li className="cursor-pointer hover:text-[#059196]">Events</li>
           <li className="cursor-pointer hover:text-[#059196]">Sponsors</li>
-          <li className="cursor-pointer hover:text-[#059196]">Contact Us</li>
+          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToFooter}>
+            Contact Us
+            </li>
         </ul>
       )}
 
