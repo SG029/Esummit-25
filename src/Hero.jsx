@@ -72,7 +72,7 @@ function Hero() {
         initial={{ x: "-100vw", y: "-100vh", opacity: 0 }} // Start position (Top-left)
         animate={{ x: 0, y: 0, opacity: 1 }} // Move to final position
         transition={{ duration: 1.5, ease: "easeOut" }} // Smooth animation
-        style={{ height: "calc(100vh + 20vh)", width: "calc(100vw + 20vw)" }} // Adjust height and width based on viewport size
+        style={{ height: "calc(100vh + 10vh)", width: "calc(100vw + 20vw)" }} // Adjust height and width based on viewport size
       />
       <motion.h1
         className="text-[16vw] md:text-[10vw] sm:text-[8vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw]"
