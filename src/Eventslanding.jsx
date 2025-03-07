@@ -2,6 +2,7 @@ import React from 'react';
 import herobg from "./assets/img/herobg.png"; 
 import Projectbar from './components/Projectbar';
 import banner from './assets/img/banner.png';
+import "./styles/events.css"
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
 
@@ -26,7 +27,7 @@ function Eventslanding() {
 
   return (
     <div
-          className='w-full min-h-[110vh] flex flex-col items-center justify-center '
+          className='backShader w-full min-h-[110vh] flex flex-col items-center justify-center '
           style={{
             backgroundImage: `url(${herobg})`,
             backgroundSize: 'cover', // Ensures the image covers the entire container
@@ -45,21 +46,21 @@ function Eventslanding() {
             />
               <Projectbar
               image={banner}
-              heading="hack for impact"
+              heading="HACK FOR IMPACT"
               description="Hack for Impact is a 24-hour hackathon where teams utilize emerging technologies (IoT, AI/ML) to build solutions addressing real-world social challenges (based on SDGs)."
               githubLink="https://unstop.com/hackathons/hack-for-impact-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419428"
               number=""
             />
               <Projectbar
               image={banner}
-              heading="scale up (1 to 100)"
+              heading="SCALE UP (1 to 100)"
               description="Scale Up (1 to 100) is a case study competition where participants analyze a real-world company's revenue, goals, and market position."
               githubLink="https://unstop.com/competitions/scale-up-1-to-100-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419464"
               number=""
             />
               <Projectbar
               image={banner}
-              heading="Mix-Matched"
+              heading="MIX-MATCHED"
               description="Mix-Matched is an exciting E-Summit event where participants randomly draw two chits from a jar, each representing vastly different fields, such as medical and fashion."
               githubLink="https://unstop.com/competitions/mix-matched-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420155"
               number=""
