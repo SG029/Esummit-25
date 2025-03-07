@@ -1,0 +1,109 @@
+@media (min-width: 350px) and (max-width: 768px) {
+    .footer-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        grid-row: 1/2;
+        height: 100%;
+    }
+
+    .img-main {
+        width: 100%;
+    }
+
+    .img-div {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5px;
+    }
+
+    .mail-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    .mailbox {
+        padding: 8px;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .Explore{
+        opacity: 0;
+    }
+
+    .locationnn{
+        width: 150%;
+    }
+
+    .socials{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 350px){
+    .footer-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        grid-row: 1/2;
+        height: 100%;
+        padding: 25px;
+    }
+
+    .img-main {
+        width: 100%;
+    }
+
+    .img-div {
+        display: flex;
+        flex-direction: row;
+        margin-left: 5px;
+    }
+
+    .mail-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    h3 {
+        font-size: 1rem;
+        text-align: start;
+    }
+
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    .mailbox {
+        padding: 8px;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .Explore{
+        opacity: 0;
+    }
+
+    .locationnn{
+        width: 100%;
+        margin-top: -85px;
+    }
+
+    .socials{
+        font-size: 1rem;
+    }
+
+    .social-links{
+        align-items: start;
+        margin-left: -55px;
+    }
+}
