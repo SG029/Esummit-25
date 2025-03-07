@@ -67,7 +67,7 @@ function Footer() {
         {/* Left Section: Logo and Description */}
         <div className='img-main flex flex-col items-start justify-center w-1/3'>
           <div className='img-div flex justify-start items-center'>
-          <div>
+            <div>
               <img src={esummit} alt="E-Summit Logo" className='w-[6vw] h-[6vw]' />
             </div>
             <div>
