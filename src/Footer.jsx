@@ -7,6 +7,7 @@ import Footersocials from '../src/components/Footersocials';
 import { FaInstagram } from "react-icons/fa"; // Instagram icon
 import { FaLinkedinIn } from "react-icons/fa"; // LinkedIn icon
 import mail from "./assets/img/mail.png"; // Ensure this path is correct
+import "./styles/footer.css";
 
 function Footer() {
   const mailboxRef = useRef(null);
@@ -55,7 +56,7 @@ function Footer() {
       }}
     >
       <div
-        className='w-[95vw] h-[55vh] flex items-center justify-between mt-10 rounded-xl mb-5 p-10'
+        className='footer-main w-[95vw] h-[50vh] flex items-center justify-between mt-10 rounded-xl mb-5 p-10'
         style={{
           backgroundColor: "rgba(4, 108, 112, 0.3)", // Semi-transparent background
           backdropFilter: "blur(10px)", // Frosted glass effect
@@ -64,11 +65,14 @@ function Footer() {
         }}
       >
         {/* Left Section: Logo and Description */}
-        <div className='flex flex-col items-start justify-center w-1/3'>
-        <div className="border-b-2 border-white">
-          <div className='flex justify-start items-center'>
-            <img src={ecell} alt="E-Cell Logo" className='w-[8.3vw]' />
-            <img src={esummit} alt="E-Summit Logo" className='w-[6vw] h-[6vw]' />
+        <div className='img-main flex flex-col items-start justify-center w-1/3'>
+          <div className='img-div flex justify-start items-center'>
+            <div>
+              <img src={esummit} alt="E-Summit Logo" className='w-[6vw] h-[6vw]' />
+            </div>
+            <div>
+              <img src={ecell} alt="E-Cell Logo" className='w-[8.3vw]' />
+            </div>
           </div>
           <div>
             <h3 className='w-6/6 font-opensanslight text-[1.3vw] mt-2 leading-7 ml-3 text-white'>
@@ -76,10 +80,11 @@ function Footer() {
             </h3>
           </div>
           {/* Mailbox */}
+          <h3 className='text-[2vw] font-bold text-white text-center font-fonseca ml-3 mt-2'>Contact Us</h3>
           <a href="mailto:ecell@iiitd.ac.in">
             <div
               ref={mailboxRef}
-              className="mailbox inline-flex items-center bg-[#AA1E0F] text-white hover:cursor-pointer justify-center my-5 p-3 rounded-md
+              className="mailbox inline-flex items-center bg-[#AA1E0F] text-white hover:cursor-pointer justify-center my-3 p-3 rounded-md
                       transition-colors duration-500 ease-in-out group hover:bg-white hover:text-black ml-3"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
@@ -87,19 +92,17 @@ function Footer() {
               <img
                 src={mail}
                 alt="Mail Icon"
-                className="w-7 transition-all duration-300 group-hover:filter group-hover:brightness-0"
+                className="mail-icon w-7 transition-all duration-300 group-hover:filter group-hover:brightness-0"
               />
               <h2 className="text-xl pl-2">ecell@iiitd.ac.in</h2>
             </div>
           </a>
         </div>
-        <h3 className="text-white font-opensanslight text-[1.3vw] mt-4 ml-4">Made with ❣️ by Webdev Team</h3>
-        </div>
 
         {/* Middle Section: Explore and Socials */}
-        <div className='flex gap-[4vw]'>
+        <div className='social-links flex gap-[4vw]'>
           {/* Explore Links */}
-          <div>
+          <div className="Explore">
             <h3 className='text-[2vw] font-bold text-white text-center font-fonseca mb-3'>Explore</h3>
             <div className="navlinks flex flex-col gap-2">
               {["About", "Events", "Speakers", "Sponsors", "Contact"].map(
