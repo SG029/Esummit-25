@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
-import { Link } from "react-router-dom"; // Import Link for navigation
+import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useLocation and useNavigate
 
 function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [buttonPos, setButtonPos] = useState({ x: 0, y: 0 });
   const getWidth = () => window.innerWidth;
+
+  const location = useLocation(); // Get current location
+  const navigate = useNavigate(); // Get navigate function
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -34,30 +37,38 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
 
   // Scroll to Hero section
   const scrollToHero = () => {
-    if (heroRef.current) {
-      heroRef.current.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
     }
+    setTimeout(() => {
+      if (heroRef.current) {
+        heroRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Small delay to allow the route change to take effect
   };
 
   // Scroll to About section
   const scrollToAbout = () => {
-    if (aboutRef.current) {
-      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
     }
-  };
-
-  // Scroll to Events section
-  const scrollToEvents = () => {
-    if (eventsRef.current) {
-      eventsRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    setTimeout(() => {
+      if (aboutRef.current) {
+        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Small delay to allow the route change to take effect
   };
 
   // Scroll to Footer section
   const scrollToFooter = () => {
-    if (footerRef.current) {
-      footerRef.current.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
     }
+    setTimeout(() => {
+      if (footerRef.current) {
+        footerRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Small delay to allow the route change to take effect
   };
 
   return (

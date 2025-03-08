@@ -1,19 +1,21 @@
 import { useState, useEffect, useRef } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // Import routing components
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Hero from "./Hero";
 import { motion } from "framer-motion";
 import Navbar from "./components/navbar";
 import About from "./About";
-import Events from "./Events"; // Import Events component
+import Events from "./Events";
 import Footer from "./Footer";
 import Eventslanding from "./Eventslanding";
-import Speaker from "./Speaker"; // Import Speaker component
-import Sponsors from "./Sponsors"; // Import Sponsors component
+import Speaker from "./Speaker";
+import Sponsors from "./Sponsors";
+import Loader from "./components/Loader"; // Import the Loader component
 
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [cursorSize, setCursorSize] = useState(25);
+  const [isLoading, setIsLoading] = useState(true); // State to manage loading
 
   // Create refs for Hero, About, Events, and Footer sections
   const heroRef = useRef(null);
@@ -52,55 +54,68 @@ function App() {
     };
   }, []);
 
+  // Function to handle video end
+  const handleVideoEnd = () => {
+    setIsLoading(false); // Hide loader and show the rest of the app
+  };
+
   return (
     <BrowserRouter>
       <div className="relative overflow-x-hidden scroll-smooth">
-        {/* Magnetic Cursor */}
-        <motion.div
-          className="cursorrr fixed pointer-events-none rounded-full bg-[#059196] z-50"
-          style={{
-            mixBlendMode: "difference",
-          }}
-          animate={{
-            x: cursorPosition.x - cursorSize / 2,
-            y: cursorPosition.y - cursorSize / 2,
-            width: `${cursorSize}px`,
-            height: `${cursorSize}px`,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 500,
-            damping: 30,
-            mass: 0.5,
-          }}
-        />
+        {/* Loader */}
+        {isLoading && <Loader onVideoEnd={handleVideoEnd} />}
 
-        {/* Navbar */}
-        <Navbar heroRef={heroRef} aboutRef={aboutRef} eventsRef={eventsRef} footerRef={footerRef} />
+        {/* Show the rest of the app only when isLoading is false */}
+        {!isLoading && (
+          <>
+            {/* Magnetic Cursor */}
+            <motion.div
+              className="cursorrr fixed pointer-events-none rounded-full bg-[#059196] z-50"
+              style={{
+                mixBlendMode: "difference",
+              }}
+              animate={{
+                x: cursorPosition.x - cursorSize / 2,
+                y: cursorPosition.y - cursorSize / 2,
+                width: `${cursorSize}px`,
+                height: `${cursorSize}px`,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                damping: 30,
+                mass: 0.5,
+              }}
+            />
 
-        {/* Page Content */}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <div ref={heroRef}>
-                  <Hero />
-                </div>
-                <div ref={aboutRef}>
-                  <About />
-                </div>
-                <Eventslanding />
-                <div ref={footerRef}>
-                  <Footer />
-                </div>
-              </>
-            }
-          />
-          <Route path="/speakers" element={<Speaker />} /> {/* Route for Speaker page */}
-          <Route path="/events" element={<Events />} /> {/* Route for Events page */}
-          <Route path="/sponsors" element={<Sponsors />} /> {/* Route for Sponsors page */}
-        </Routes>
+            {/* Navbar */}
+            <Navbar heroRef={heroRef} aboutRef={aboutRef} eventsRef={eventsRef} footerRef={footerRef} />
+
+            {/* Page Content */}
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <div ref={heroRef}>
+                      <Hero />
+                    </div>
+                    <div ref={aboutRef}>
+                      <About />
+                    </div>
+                    <Eventslanding />
+                    <div ref={footerRef}>
+                      <Footer />
+                    </div>
+                  </>
+                }
+              />
+              <Route path="/speakers" element={<Speaker />} />
+              <Route path="/events" element={<Events />} />
+              <Route path="/sponsors" element={<Sponsors />} />
+            </Routes>
+          </>
+        )}
       </div>
     </BrowserRouter>
   );

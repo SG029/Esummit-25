@@ -2,10 +2,7 @@ import React from 'react';
 import herobg from "./assets/img/herobg.png"; 
 import Projectbar from './components/Projectbar';
 import banner from './assets/img/banner.png';
-<<<<<<< HEAD
-// import "./styles/events.css"
-=======
->>>>>>> d2cefcb61e22bbce3b9e1bca4b8faf9328c5f8ac
+
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
 

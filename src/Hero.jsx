@@ -57,7 +57,7 @@ function TypewriterText({ text, delay }) {
 function Hero() {
   return (
     <div
-              className='w-full h-[110vh] flex flex-col items-center justify-center overflow-hidden'
+              className='w-full h-[100vh] flex flex-col items-center justify-center overflow-hidden'
               style={{
                 backgroundImage: `url(${herobg})`,
                 backgroundSize: 'cover', // Ensures the image covers the entire container
@@ -68,7 +68,7 @@ function Hero() {
       <motion.img
         src={bluevector}
         alt=""
-        className="absolute top-0 -right-[20vw] w-[100vw] mt-[20vh]"
+        className="absolute top-0 -right-[20vw] w-[100vw] mt-[20vh] -z-1"
         initial={{ x: "-100vw", y: "-100vh", opacity: 0 }} // Start position (Top-left)
         animate={{ x: 0, y: 0, opacity: 1 }} // Move to final position
         transition={{ duration: 1.5, ease: "easeOut" }} // Smooth animation

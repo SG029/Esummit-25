@@ -56,7 +56,7 @@ function Footer() {
       }}
     >
       <div
-        className='footer-main w-[95vw] h-[50vh] flex items-center justify-between mt-10 rounded-xl mb-5 p-10'
+        className='footer-main w-[95vw] h-[52vh] flex items-center justify-between mt-10 rounded-xl mb-5 p-10'
         style={{
           backgroundColor: "rgba(4, 108, 112, 0.3)", // Semi-transparent background
           backdropFilter: "blur(10px)", // Frosted glass effect
@@ -66,6 +66,7 @@ function Footer() {
       >
         {/* Left Section: Logo and Description */}
         <div className='img-main flex flex-col items-start justify-center w-1/3'>
+        <div className="border-b-2 border-white ">
           <div className='img-div flex justify-start items-center'>
             <div>
               <img src={esummit} alt="E-Summit Logo" className='w-[6vw] h-[6vw]' />
@@ -80,7 +81,7 @@ function Footer() {
             </h3>
           </div>
           {/* Mailbox */}
-          <h3 className='text-[2vw] font-bold text-white text-center font-fonseca ml-3 mt-2'>Contact Us</h3>
+          {/* <h3 className='text-[2vw] font-bold text-white text-center font-fonseca ml-3 mt-2'>Contact Us</h3> */}
           <a href="mailto:ecell@iiitd.ac.in">
             <div
               ref={mailboxRef}
@@ -97,6 +98,9 @@ function Footer() {
               <h2 className="text-xl pl-2">ecell@iiitd.ac.in</h2>
             </div>
           </a>
+        </div>
+        <h3 className="w-6/6 font-opensanslight text-[1.3vw] mt-2 leading-7 ml-3 text-white">Made with ❣️ by WebDev Team </h3>
+
         </div>
 
         {/* Middle Section: Explore and Socials */}
