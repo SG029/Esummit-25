@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { RxCross2 } from "react-icons/rx";
-import Hero from "../Hero";
-import About from "../About";
-import Events from "../Events"; // Import Events instead of Eventslanding
+import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -55,6 +52,8 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
       eventsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Scroll to Footer section
   const scrollToFooter = () => {
     if (footerRef.current) {
       footerRef.current.scrollIntoView({ behavior: "smooth" });
@@ -67,7 +66,7 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
       <img
         src="/src/assets/E-summit logo.png"
         alt="logo"
-        className="h-[8vw] sm:h-[6vw] md:h-[4vw] ml-6"
+        className="h-[5vw] sm:h-[6vw] md:h-[4vw] ml-6"
       />
 
       {/* Centered Navigation Links */}
@@ -85,14 +84,18 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
           <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToAbout}>
             About
           </li>
-          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToEvents}>
-            Events
+          <li className="cursor-pointer hover:text-[#059196]">
+            <Link to="/events">Events</Link> {/* Use Link for navigation */}
           </li>
-          <li className="cursor-pointer hover:text-[#059196]">Speakers</li>
-          <li className="cursor-pointer hover:text-[#059196]">Sponsors</li>
+          <li className="cursor-pointer hover:text-[#059196]">
+            <Link to="/speakers">Speakers</Link> {/* Use Link for navigation */}
+          </li>
+          <li className="cursor-pointer hover:text-[#059196]">
+            <Link to="/sponsors">Sponsors</Link> {/* Use Link for navigation */}
+          </li>
           <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToFooter}>
             Contact Us
-            </li>
+          </li>
         </ul>
       )}
 
