@@ -66,7 +66,7 @@ function Footer() {
       >
         {/* Left Section: Logo and Description */}
         <div className='img-main flex flex-col items-start justify-center w-1/3'>
-        <div className="border-b-2 border-white ">
+        <div>
           <div className='img-div flex justify-start items-center'>
             <div>
               <img src={esummit} alt="E-Summit Logo" className='w-[6vw] h-[6vw]' />
@@ -76,7 +76,7 @@ function Footer() {
             </div>
           </div>
           <div>
-            <h3 className='w-6/6 font-opensanslight text-[1.3vw] mt-2 leading-7 ml-3 text-white'>
+            <h3 className='w-6/6 font-opensanslight text-[1.3vw] mt-2 leading-7 text-white'>
               E-Summit IIIT Delhi is North India's one of the largest entrepreneurial fest, organized by the Entrepreneurship Cell to inspire and empower future leaders.
             </h3>
           </div>
@@ -86,7 +86,7 @@ function Footer() {
             <div
               ref={mailboxRef}
               className="mailbox inline-flex items-center bg-[#AA1E0F] text-white hover:cursor-pointer justify-center my-3 p-3 rounded-md
-                      transition-colors duration-500 ease-in-out group hover:bg-white hover:text-black ml-3"
+                      transition-colors duration-500 ease-in-out group hover:bg-white hover:text-black"
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
             >
@@ -99,7 +99,8 @@ function Footer() {
             </div>
           </a>
         </div>
-        <h3 className="w-6/6 font-opensanslight text-[1.3vw] mt-2 leading-7 ml-3 text-white">Made with ❣️ by WebDev Team </h3>
+        <hr  className="line bg-white"/>
+        <h3 className="w-6/6 font-opensanslight text-[1.3vw] mt-2 leading-7 text-white">Made with ❣️ by WebDev Team </h3>
 
         </div>
 

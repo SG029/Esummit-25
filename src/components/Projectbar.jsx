@@ -50,7 +50,7 @@ function Projectbar({ image, heading, description, githubLink, number }) {
         onClick={() => window.open(githubLink, "_blank")}
       >
         <div className="read-cont hover:translate-y-[-50%] transition-all duration-300 ease-out">
-          <div className="read-probar-more font-opensanslight text-[1.1rem] font-light flex items-center justify-center group relative overflow-hidden group-hover:text-black">
+          <div className="register read-probar-more font-opensanslight text-[1.1rem] font-light flex items-center justify-center group relative overflow-hidden group-hover:text-black">
             Register Now
             <img
               src={arrow}
@@ -59,7 +59,7 @@ function Projectbar({ image, heading, description, githubLink, number }) {
             />
           </div>
           {/* Duplicate for the second "Read more" */}
-          <div className="read-probar-more font-opensanslight text-[1.1rem] font-light flex items-center justify-center group relative overflow-hidden group-hover:text-black">
+          <div className="register read-probar-more font-opensanslight text-[1.1rem] font-light flex items-center justify-center group relative overflow-hidden group-hover:text-black">
             Register Now
             <img
               src={arrow}
