@@ -99,7 +99,7 @@ function Footer() {
             </div>
           </a>
         </div>
-        <hr  className="w-100 bg-white"/>
+        <hr  className="line bg-white"/>
         <h3 className="w-6/6 font-opensanslight text-[1.3vw] mt-2 leading-7 text-white">Made with ❣️ by WebDev Team </h3>
 
         </div>
