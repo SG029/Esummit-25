@@ -84,7 +84,7 @@ function Hero() {
       </motion.h1>
 
       <motion.h2
-        className="font-fonseca uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw] text-[2vw]"
+        className="font-fonseca uppercase text-[#E6D7A5] font-semibold drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw] text-[2vw]"
         initial={{ opacity: 0 }} // Only fade-in effect
         animate={{ opacity: 1 }} // Fade in smoothly
         transition={{ duration: 1, ease: "easeOut", delay: 1.3 }} // Delay after H1
