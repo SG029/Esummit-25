@@ -15,7 +15,7 @@ import Loader from "./components/Loader"; // Import the Loader component
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [cursorSize, setCursorSize] = useState(25);
-  const [isLoading, setIsLoading] = useState(true); // State to manage loading
+  const [isLoading, setIsLoading] = useState(window.innerWidth < 2000 && window.innerWidth > 1130); // State to manage loading
 
   // Create refs for Hero, About, Events, and Footer sections
   const heroRef = useRef(null);
