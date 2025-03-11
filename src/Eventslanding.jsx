@@ -5,6 +5,7 @@ import banner2 from './assets/img/e1.png';
 import EventsContainer from './components/events';
 import "./styles/newevents.css"
 import back from "./assets/img/red vector.png";
+import {useNavigate} from "react-router-dom";
 
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
@@ -27,6 +28,7 @@ function useIsMobile() {
 
 function Eventslanding() {
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
 
   return (
     <div
@@ -52,7 +54,7 @@ function Eventslanding() {
                 </h1>
               </div>
               <div className='w-[100%] text-center '>
-                <p className='text-amber-200 text-[2vw] font-opensanslight'>Explore our lineup of exciting events designed to inspire, educate and connect entrepreneurs at all stages</p>
+                <p className='text-amber-200 text-[2.5vw] font-opensanslight'>Explore our lineup of exciting events designed to inspire, educate and connect entrepreneurs at all stages</p>
               </div>
             </div>
             
@@ -103,7 +105,7 @@ function Eventslanding() {
           </div>
             <div>
               <a 
-                    href="https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569" 
+                    onClick={() => navigate('/events')}
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="no-underline"
