@@ -3,4 +3,21 @@
     display: none;
   }     
 }
-  
+
+.rise-animation {
+  position: absolute;
+  top: 50%; /* Start at the middle of the screen */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rise 1.5s ease-out forwards; /* Animation duration and easing */
+}
+
+@keyframes rise {
+  from {
+    top: 50%; /* Start at the middle */
+  }
+  to {
+    top: 30%; /* Move to the top */
+  }
+}
+

@@ -7,7 +7,7 @@ import "./styles/about.css";
 function About() {
   return (
     <div
-      className='w-full h-[110vh] flex flex-col items-center justify-center about-container'
+      className='w-full min-h-[100vh] flex flex-col items-center justify-center about-container'
       style={{
         backgroundImage: `url(${herobg})`,
         backgroundSize: 'cover', // Ensures the image covers the entire container
@@ -15,7 +15,7 @@ function About() {
         backgroundRepeat: 'no-repeat', // Prevents the image from repeating
       }}
     >
-      <div className='about justify-center items-center flex flex-col'>
+      <div className='about justify-center items-center flex flex-col mt-0'>
         <h1 className='text-[4vw] font-bold text-white text-center font-fonseca mt-[10vw]'>
           ABOUT E-SUMMIT
         </h1>

@@ -1,7 +1,7 @@
 import React from 'react';
 import herobg from "./assets/img/herobg.png"; 
 import banner2 from './assets/img/e1.png';
-import "@fontsource/open-sans-condensed"
+// import "@fontsource/open-sans-condensed"
 import EventsContainer from './components/events';
 import "./styles/newevents.css"
 import back from "./assets/img/red vector.png";
@@ -52,7 +52,7 @@ function Eventslanding() {
                 </h1>
               </div>
               <div className='w-[100%] text-center '>
-                <p className='text-amber-200 text-[2vw] font-[open_sans_condensed]'>Explore our lineup of exciting events designed to inspire, educate and connect entrepreneurs at all stages</p>
+                <p className='text-amber-200 text-[2vw] font-opensanslight'>Explore our lineup of exciting events designed to inspire, educate and connect entrepreneurs at all stages</p>
               </div>
             </div>
             
