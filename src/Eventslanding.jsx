@@ -1,7 +1,10 @@
 import React from 'react';
 import herobg from "./assets/img/herobg.png"; 
-import Projectbar from './components/Projectbar';
-import banner from './assets/img/banner.png';
+import banner2 from './assets/img/e1.png';
+import "@fontsource/open-sans-condensed"
+import EventsContainer from './components/events';
+import "./styles/newevents.css"
+import back from "./assets/img/red vector.png";
 
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
@@ -27,7 +30,7 @@ function Eventslanding() {
 
   return (
     <div
-          className='backShader w-full min-h-[110vh] flex flex-col items-center justify-center '
+          className='e-back backShader w-full min-h-[110vh] flex flex-col items-center justify-center '
           style={{
             backgroundImage: `url(${herobg})`,
             backgroundSize: 'cover', // Ensures the image covers the entire container
@@ -35,38 +38,69 @@ function Eventslanding() {
             backgroundRepeat: 'no-repeat', // Prevents the image from repeating
           }}
         >
-            <h1 className='text-[4vw] font-bold text-white text-center font-fonseca mt-[10vw]'>EVENTS</h1>
-            <div className='w-full flex flex-col items-center justify-center mt-10'>
-              <Projectbar
-              image={banner}
-              heading="PITCHCAFE 8.0"
-              description="E-Summit's flagship event connecting innovators, startups, and investors for mentorship, funding, and networking opportunities."
-              githubLink="https://unstop.com/competitions/pitchcafe-80-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420180"
-              number=""
-            />
-              <Projectbar
-              image={banner}
-              heading="HACK FOR IMPACT"
-              description="Hack for Impact is a 24-hour hackathon where teams utilize emerging technologies (IoT, AI/ML) to build solutions addressing real-world social challenges (based on SDGs)."
-              githubLink="https://unstop.com/hackathons/hack-for-impact-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419428"
-              number=""
-            />
-              <Projectbar
-              image={banner}
-              heading="SCALE UP (1 to 100)"
-              description="Scale Up (1 to 100) is a case study competition where participants analyze a real-world company's revenue, goals, and market position."
-              githubLink="https://unstop.com/competitions/scale-up-1-to-100-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419464"
-              number=""
-            />
-              <Projectbar
-              image={banner}
-              heading="MIX-MATCHED"
-              description="Mix-Matched is an exciting E-Summit event where participants randomly draw two chits from a jar, each representing vastly different fields, such as medical and fashion."
-              githubLink="https://unstop.com/competitions/mix-matched-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420155"
-              number=""
-            />
+          <div style={{
+            backgroundImage: `url(${back})`,
+            backgroundSize: 'cover',
+            width: '100%',
+            height: '100%',
+          }}>
+            <div className='top-0' >
+              <div>
+                <h1 className='text-[4vw] font-bold text-center font-fonseca mt-[10vw]'>
+                  <span className='text-amber-200'>FEATURED </span> 
+                  <span className='e-text text-red-700'>EVENTS</span>
+                </h1>
+              </div>
+              <div className='w-[100%] text-center '>
+                <p className='text-amber-200 text-[2vw] font-[open_sans_condensed]'>Explore our lineup of exciting events designed to inspire, educate and connect entrepreneurs at all stages</p>
+              </div>
             </div>
-
+            
+            <div className='event-container mt-10'>
+              <EventsContainer
+                link={"https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569"}
+                image={banner2}
+                heading="PITCHCAFE 8.0"
+                date="START 6th March 2022"
+                mode="Virtual"
+              />
+              <EventsContainer
+              link={"https://unstop.com/competitions/concept-marketing-challenge-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-del-1420328"}
+                image={banner2}
+                heading="CONCEPT MARKETING CHALLENGE"
+                date="START 6th March 2022"
+                mode="IIIT DELHI, INDIA"
+                />
+              <EventsContainer
+                link={"https://unstop.com/hackathons/hack-for-impact-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419428"}
+                image={banner2}
+                heading="HACK FOR IMPACT"
+                date="START 7th March 2022"
+                mode="IIIT DELHI, INDIA"
+              />
+              <EventsContainer
+                link={"https://unstop.com/competitions/scale-up-1-to-100-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419464"}
+                image={banner2}
+                heading="SCALE UP (1 to 100)"
+                date="START 6th March 2022"
+                mode="IIIT DELHI, INDIA"
+                />
+              <EventsContainer
+                link={"https://unstop.com/competitions/mix-matched-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420155"}
+                image={banner2}
+                heading="MIX-MATCHED"
+                date="START 6th March 2022"
+                mode="IIIT DELHI, INDIA"
+                />
+              <EventsContainer
+                link={"https://unstop.com/hackathons/0-to-1-ideathon-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420332"}
+                image={banner2}
+                heading="0 TO 1 IDEATHON"
+                date="START 6th March 2022"
+                mode="IIIT DELHI, INDIA"
+                />
+            </div>
+          </div>
             <div>
               <a 
                     href="https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569" 
