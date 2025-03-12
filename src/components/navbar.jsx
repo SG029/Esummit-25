@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useLocation and useNavigate
+import logo from "../assets/E-summit logo.png"; // Import the logo image
 
 function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -75,8 +76,8 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
     <nav className="flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full">
       {/* Logo on the left */}
       <img
-        src="/src/assets/E-summit logo.png"
-        alt="logo"
+        src={logo}
+        alt={logo}
         className="h-[5vw] sm:h-[6vw] md:h-[4vw] ml-6"
       />
 
