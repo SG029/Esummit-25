@@ -83,6 +83,11 @@ function App() {
   // Function to handle video end
   const handleVideoEnd = () => {
     setIsLoading(false); // Hide loader and show the rest of the app
+
+    // Delay the transition to bluevector2 by 1 second
+    setTimeout(() => {
+      setIsBlueVectorFinal(true);
+    }, 1500);
   };
 
   return (

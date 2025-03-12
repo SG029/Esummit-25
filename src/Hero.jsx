@@ -58,6 +58,16 @@ function TypewriterText({ text, delay }) {
 // Hero component
 function Hero() {
   const isMobile = useIsMobile();
+  const [showButton, setShowButton] = useState(false); // State to control button visibility
+
+  // Show the button after 2.5 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowButton(true);
+    }, 4000); // 2.5 seconds delay
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
 
   return (
     <div
@@ -89,9 +99,17 @@ function Hero() {
         <TypewriterText text="SYMPHONY OF POSSIBILITIES" delay={1.8} />
       </motion.h2>
 
-      {/* Timer and Register components */}
+      {/* Timer component */}
       <Timer />
-      <Register />
+
+      {/* Register button with animation */}
+      <motion.div
+        initial={{ x: "0%", y: "0%", opacity: 0 }} // Start from the center
+        animate={showButton ? { x: "0%", y: "0%", opacity: 1 } : {}} // Slide to original position
+        transition={{ duration: 1, ease: "easeOut", delay: 0 }} // Smooth animation
+      >
+        <Register />
+      </motion.div>
     </div>
   );
 }
