@@ -1,15 +1,14 @@
 .event-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    margin-left: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin-left : 80px;
     margin-bottom: 15px;
 }
 
-@media (min-width: 1170px) and (max-width: 1440px) {
-    .event-container{
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+.e-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 @media (min-width: 768px) and (max-width: 1169px) {
@@ -24,6 +23,8 @@
 @media (max-width: 767px) {
     .event-container{
         grid-template-columns: 1fr;
+        margin-right: 30px;
+        margin-left: 30px;
     }
     .e-text{
         color: #FFEBA9;
@@ -32,9 +33,12 @@
         padding-top: 6rem;
     }
     h3{
-        font-size: 0.75rem;
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 1.5rem;
     }
     .e-container{
-        margin-right: 10px;
+        width: 100%;
     }
 }
