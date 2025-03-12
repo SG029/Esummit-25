@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import herobg from "./assets/img/herobg.png";
 import Timer from "./components/timer";
 import Register from "./components/register";
-import bluevector from "./assets/img/Vector 2.png";
 import { useState, useEffect } from "react";
 
 // Custom hook to check if the screen is mobile
@@ -21,11 +20,6 @@ function useIsMobile() {
   }, []);
 
   return isMobile;
-}
-
-// Function to get the current window width
-function getwidth() {
-  return window.innerWidth;
 }
 
 // Typewriter effect component
@@ -75,32 +69,6 @@ function Hero() {
         backgroundRepeat: "no-repeat", // Prevents the image from repeating
       }}
     >
-      {/* Blue vector image for larger screens */}
-      {getwidth() < 2000 && getwidth() > 1130 && (
-        <motion.img
-          src={bluevector}
-          alt=""
-          className="absolute top-0 -right-[10vw] w-[100vw] mt-[10vh] -z-1"
-          initial={{ x: "-40vw", y: "-40vh", opacity: 0 }} // Start position (Top-left)
-          animate={{ x: "2vw", y: "10vh", opacity: 1 }} // Move to final position
-          transition={{ duration: 2, ease: "easeOut" }} // Smooth animation
-          style={{ height: "calc(130vh + 10vh)", width: "calc(100vw + 10vw)" }} // Increased height and width
-        />
-      )}
-
-      {/* Blue vector image for smaller screens */}
-      {getwidth() < 1130 && (
-        <motion.img
-          src={bluevector}
-          alt=""
-          className="absolute top-0 -right-[10vw] w-[100vw] mt-[10vh] -z-1"
-          initial={{ x: "-90vw", y: "-100vh", opacity: 0 }} // Start position (Top-left)
-          animate={{ x: 0, y: 0, opacity: 1 }} // Move to final position
-          transition={{ duration: 1.5, ease: "easeOut" }} // Smooth animation
-          style={{ height: "calc(150vh + 5vh)", width: "calc(200vw + 10vw)" }} // Increased height and width
-        />
-      )}
-
       {/* Main heading with rising animation */}
       <motion.h1
         className="text-[16vw] md:text-[12vw] sm:text-[8vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw]"

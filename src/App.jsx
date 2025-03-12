@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Hero from "./Hero";
-import { motion, AnimatePresence } from "framer-motion"; // Import AnimatePresence
+import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "./components/navbar";
 import About from "./About";
 import Events from "./Events";
@@ -10,18 +10,44 @@ import Footer from "./Footer";
 import Eventslanding from "./Eventslanding";
 import Speaker from "./Speaker";
 import Sponsors from "./Sponsors";
-import Loader from "./components/Loader"; // Import the Loader component
+import Loader from "./components/Loader";
+import bluevector from "./assets/img/Vector 2.png"; // Import the bluevector image
+import bluevector2 from "./assets/img/Vector 2.png"; // Import the bluevector2 image
+import yellowvector from "./assets/img/yellowvector.png"; // Import the yellowvector image
 
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [cursorSize, setCursorSize] = useState(25);
-  const [isLoading, setIsLoading] = useState(window.innerWidth < 2000 && window.innerWidth > 1130); // State to manage loading
+  const [isLoading, setIsLoading] = useState(window.innerWidth < 2000 && window.innerWidth > 1130);
+  const [scrollProgress, setScrollProgress] = useState(0); // Track scroll progress
+  const [isBlueVectorFinal, setIsBlueVectorFinal] = useState(false); // Track if bluevector has reached its final destination
 
   // Create refs for Hero, About, Events, and Footer sections
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const eventsRef = useRef(null);
   const footerRef = useRef(null);
+
+  // Handle scroll progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY; // Current scroll position
+      const windowHeight = window.innerHeight; // Height of the viewport
+      const documentHeight = document.documentElement.scrollHeight; // Total height of the document
+
+      // Calculate scroll progress (0 to 1)
+      const progress = scrollY / (documentHeight - windowHeight);
+      setScrollProgress(progress);
+
+      // Trigger the transition to bluevector2 when bluevector reaches its final position
+      if (progress >= 0.99) {
+        setIsBlueVectorFinal(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Handle mouse move for custom cursor
   useEffect(() => {
@@ -85,6 +111,52 @@ function App() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, ease: "easeOut" }}
             >
+              {/* Bluevector */}
+              {!isBlueVectorFinal && (
+                <motion.img
+                  src={bluevector}
+                  alt=""
+                  className="fixed top-0 -right-[20vw] w-[100vw] mt-[10vh] -z-1"
+                  style={{
+                    height: "calc(130vh + 10vh)",
+                    width: "calc(100vw + 10vw)",
+                    transform: `translate(${scrollProgress * -100}vw, ${scrollProgress * -100}vh) rotate(${scrollProgress * -30}deg)`, // Move to the top-left and rotate anticlockwise
+                    opacity: 1 - scrollProgress * 5, // Fade out bluevector
+                  }}
+                  initial={{ x: "-40vw", y: "-40vh", opacity: 0 }} // Start position (top-left)
+                  animate={{ x: "0vw", y: "0vh", opacity: 1 }} // Move to final position
+                  transition={{ duration: 1.5, ease: "easeOut" }} // Smooth animation
+                />
+              )}
+
+              {/* Bluevector2 */}
+              {isBlueVectorFinal && (
+                <motion.img
+                  src={bluevector2}
+                  alt=""
+                  className="fixed top-0 -right-[20vw] w-[100vw] mt-[10vh] -z-1"
+                  style={{
+                    height: "calc(130vh + 10vh)",
+                    width: "calc(100vw + 10vw)",
+                    transform: `translate(${scrollProgress * -100}vw, ${scrollProgress * -100}vh) rotate(${scrollProgress * -30}deg)`, // Move to the top-left and rotate anticlockwise
+                    opacity: 1 - scrollProgress * 5, // Fade out bluevector2
+                  }}
+                />
+              )}
+
+              {/* Yellowvector */}
+              <motion.img
+                src={yellowvector}
+                alt=""
+                className="fixed top-0 -right-[20vw] w-[100vw] mt-[10vh] -z-1"
+                style={{
+                  height: "calc(130vh + 10vh)",
+                  width: "calc(100vw + 10vw)",
+                  transform: `translate(${scrollProgress * -100}vw, ${scrollProgress * -100}vh) rotate(${scrollProgress * -30}deg)`, // Move to the top-left and rotate anticlockwise
+                  opacity: scrollProgress * 5, // Fade in yellowvector as scroll progresses
+                }}
+              />
+
               {/* Magnetic Cursor */}
               <motion.div
                 className="cursorrr fixed pointer-events-none rounded-full bg-[#059196] z-50"
