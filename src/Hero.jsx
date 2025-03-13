@@ -1,9 +1,8 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import herobg from "./assets/img/herobg.png";
 import Timer from "./components/timer";
 import Register from "./components/register";
-import { useState, useEffect } from "react";
 
 // Custom hook to check if the screen is mobile
 function useIsMobile() {
@@ -59,14 +58,44 @@ function TypewriterText({ text, delay }) {
 function Hero() {
   const isMobile = useIsMobile();
   const [showButton, setShowButton] = useState(false); // State to control button visibility
+  const [showNewRegister, setShowNewRegister] = useState(false); // State to control which register to show
+  const [scrollProgress, setScrollProgress] = useState(0); // Track scroll progress
 
-  // Show the button after 2.5 seconds
+  // Show the button after 4 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowButton(true);
-    }, 4000); // 2.5 seconds delay
+    }, 4000); // 4 seconds delay
 
     return () => clearTimeout(timer); // Cleanup on unmount
+  }, []);
+
+  // Swap to new register after 4 seconds
+  useEffect(() => {
+    const swapTimer = setTimeout(() => {
+      setShowNewRegister(true);
+    }, 4000); // 4 seconds delay
+
+    return () => clearTimeout(swapTimer); // Cleanup on unmount
+  }, []);
+
+  // Track scroll progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY; // Current scroll position
+      const windowHeight = window.innerHeight; // Height of the viewport
+      const documentHeight = document.documentElement.scrollHeight; // Total height of the document
+
+      // Calculate scroll progress (0 to 1)
+      const progress = scrollY / (documentHeight - windowHeight);
+      setScrollProgress(progress);
+
+      // Debug: Log scroll progress
+      console.log("Scroll Progress:", progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -85,6 +114,9 @@ function Hero() {
         initial={{ y: "20vh", opacity: 1 }} // Start at the center of the screen
         animate={{ y: "00vh", opacity: 1 }} // Rise to the final position
         transition={{ duration: 1.2, ease: "easeOut" }} // Smooth animation
+        style={{
+          y: `${scrollProgress * -50}vh`, // Move up based on scroll progress
+        }}
       >
         E-SUMMIT 2025
       </motion.h1>
@@ -95,21 +127,52 @@ function Hero() {
         initial={{ opacity: 0 }} // Only fade-in effect
         animate={{ opacity: 1 }} // Fade in smoothly
         transition={{ duration: 1, ease: "easeOut", delay: 1.3 }} // Delay after H1
+        style={{
+          y: `${scrollProgress * -100}vh`, // Move up based on scroll progress
+        }}
       >
         <TypewriterText text="SYMPHONY OF POSSIBILITIES" delay={1.8} />
       </motion.h2>
 
       {/* Timer component */}
-      <Timer />
-
-      {/* Register button with animation */}
       <motion.div
-        initial={{ x: "0%", y: "0%", opacity: 0 }} // Start from the center
-        animate={showButton ? { x: "0%", y: "0%", opacity: 1 } : {}} // Slide to original position
-        transition={{ duration: 1, ease: "easeOut", delay: 0 }} // Smooth animation
+        style={{
+          y: `${scrollProgress * -150}vh`, // Move up based on scroll progress
+        }}
       >
-        <Register />
+        <Timer />
       </motion.div>
+
+      {/* Register Button Animation */}
+      <AnimatePresence mode="wait">
+        {!showNewRegister ? (
+          // Old Register - No scroll animation
+          <motion.div
+            key="oldregister"
+            className="oldregister"
+            initial={{ x: "0%", y: "0%", opacity: 0 }}
+            animate={showButton ? { x: "0%", y: "0%", opacity: 1 } : {}}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0 }}
+          >
+            <Register scrollProgress={0} /> {/* Pass 0 to prevent scroll animation */}
+          </motion.div>
+        ) : (
+          // New Register - With scroll animation
+          <motion.div
+            key="newregister"
+            className="newregister"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            style={{
+              y: `${scrollProgress * -200}vh`, // Move up as h1 and h2 (same speed as h2)
+            }}
+          >
+            <Register scrollProgress={scrollProgress} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
