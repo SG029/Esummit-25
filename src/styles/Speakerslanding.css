@@ -1,0 +1,23 @@
+/* Marquee animation */
+@keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .marquee {
+    overflow: hidden; /* Hide overflow */
+    white-space: nowrap; /* Prevent wrapping */
+    position: relative;
+    display: flex;
+  }
+  
+  .marquee-inner {
+    display: flex;
+    gap: 3vw; /* Adjust the gap between cards */
+    animation: marquee 15s linear infinite; /* Adjust duration as needed */
+  }
+  
