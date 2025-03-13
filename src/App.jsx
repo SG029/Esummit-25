@@ -14,6 +14,7 @@ import Loader from "./components/Loader";
 import bluevector from "./assets/img/Vector 2.png"; // Import the bluevector image
 import bluevector2 from "./assets/img/Vector 2.png"; // Import the bluevector2 image
 import yellowvector from "./assets/img/yellowvector.png"; // Import the yellowvector image
+import Speakerslanding from "./Speakerslanding";
 
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -198,6 +199,7 @@ function App() {
                         <About />
                       </div>
                       <Eventslanding />
+                      <Speakerslanding />
                       <div ref={footerRef}>
                         <Footer />
                       </div>
@@ -207,6 +209,7 @@ function App() {
                 <Route path="/speakers" element={<Speaker />} />
                 <Route path="/events" element={<Events />} />
                 <Route path="/sponsors" element={<Sponsors />} />
+                
               </Routes>
             </motion.div>
           )}
