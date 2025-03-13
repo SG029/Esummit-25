@@ -41,9 +41,7 @@ function Speakerslanding() {
           OUR <span className="text-[#059196]">SPEAKERS</span>
         </h1>
         <h3 className="w-4/6 text-[2vw] text-center text-white font-opensanslight leading-10 about-text">
-          E-Summit is the flagship entrepreneurship summit organized to promote
-          innovation, entrepreneurship, and leadership among students and
-          professionals.
+        Learn from industry leaders, successful entrepreneurs, and innovators who are shaping the future of business and technology.
         </h3>
       </motion.div>
 
