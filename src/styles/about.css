@@ -12,3 +12,8 @@
     margin-bottom: 6rem;
 }
 }
+
+.about-section * {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(100px); /* Start 100px below */
+}

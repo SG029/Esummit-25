@@ -75,11 +75,13 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
   return (
     <nav className="flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full">
       {/* Logo on the left */}
-      <img
-        src={logo}
-        alt={logo}
-        className="h-[5vw] sm:h-[6vw] md:h-[4vw] ml-6"
-      />
+      <Link to="/"> {/* Link the logo to the home page */}
+        <img
+          src={logo}
+          alt={logo}
+          className="h-[5vw] sm:h-[6vw] md:h-[4vw] ml-6 cursor-pointer" // Add cursor-pointer for better UX
+        />
+      </Link>
 
       {/* Centered Navigation Links */}
       {isMenuOpen && (
