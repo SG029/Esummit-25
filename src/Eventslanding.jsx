@@ -48,7 +48,7 @@ function Eventslanding() {
           }}>
             <div className='top-0' >
               <div>
-                <h1 className='text-[4vw] font-bold text-center font-fonseca mt-[10vw]'>
+                <h1 className='text-[4.5vw] font-bold text-center font-fonseca mt-[10vw]'>
                   <span className='text-amber-200'>FEATURED </span> 
                   <span className='e-text text-red-700'>EVENTS</span>
                 </h1>

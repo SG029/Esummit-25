@@ -33,10 +33,10 @@ function About() {
         variants={fadeInUp}
         className='about justify-center items-center flex flex-col mt-0'
       >
-        <h1 className='text-[4vw] font-bold text-black text-center font-fonseca mt-[5vh]'>
+        <h1 className='text-[4.5vw] font-bold text-black text-center font-fonseca mt-[5vh]'>
           ABOUT E-SUMMIT
         </h1>
-        <h3 className='w-4/6 text-[2vw] text-center text-black font-opensanslight leading-10 about-text'>
+        <h3 className='w-4/6 text-[2.5vw] text-center text-black font-opensanslight leading-10 about-text'>
           E-Summit is the flagship entrepreneurship summit organized to promote innovation, entrepreneurship, and leadership among students and professionals.
         </h3>
       </motion.div>
