@@ -13,7 +13,7 @@ import Sponsors from "./Sponsors";
 import Loader from "./components/Loader";
 import bluevector from "./assets/img/Vector 2.png"; // Import the bluevector image
 import bluevector2 from "./assets/img/Vector 2.png"; // Import the bluevector2 image
-import yellowvector from "./assets/img/yellowvector.png"; // Import the yellowvector image
+import yellowvector from "./assets/img/yellow vector.png"; // Import the yellowvector image
 import Speakerslanding from "./Speakerslanding";
 
 function App() {
