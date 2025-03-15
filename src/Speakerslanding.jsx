@@ -37,10 +37,10 @@ function Speakerslanding() {
         variants={fadeInUp} // Apply the animation variants
         className="about justify-center items-center flex flex-col mt-0"
       >
-        <h1 className="text-[4vw] font-bold text-white text-center font-fonseca mt-[5vh]">
+        <h1 className="text-[4.5vw] font-bold text-white text-center font-fonseca mt-[5vh]">
           OUR <span className="text-[#059196]">SPEAKERS</span>
         </h1>
-        <h3 className="w-4/6 text-[2vw] text-center text-white font-opensanslight leading-10 about-text">
+        <h3 className="w-4/6 text-[2.5vw] text-center text-white font-opensanslight leading-10 about-text">
         Learn from industry leaders, successful entrepreneurs, and innovators who are shaping the future of business and technology.
         </h3>
       </motion.div>

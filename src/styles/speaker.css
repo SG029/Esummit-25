@@ -1,0 +1,11 @@
+@media (max-width:1600px){
+    .speaker-div{
+        min-width: 30vh;
+    }
+}
+
+@media (max-width: 768px){
+    .speaker-div{
+        min-width: 27vh;
+    }
+}
