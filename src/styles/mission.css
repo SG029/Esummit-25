@@ -9,11 +9,5 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .about_text{
-        font-size: 2vh !important;
-    }
-
-    
+    }    
 }

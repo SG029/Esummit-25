@@ -36,7 +36,7 @@ function About() {
         <h1 className='text-[4.5vw] font-bold text-black text-center font-fonseca mt-[5vh]'>
           ABOUT E-SUMMIT
         </h1>
-        <h3 className='w-4/6 text-[2.5vw] text-center text-black font-opensanslight leading-10 about-text'>
+        <h3 className='w-5/6 text-[2.5vw] text-center text-black font-opensanslight leading-10 about-text'>
           E-Summit is the flagship entrepreneurship summit organized to promote innovation, entrepreneurship, and leadership among students and professionals.
         </h3>
       </motion.div>
@@ -66,20 +66,20 @@ function About() {
         >
           <div className='flex justify-between items-center gap-3 discription-container'>
             <div className='flex justify-between flex-col items-center bg-[#482B00] bg-opacity-50 rounded-xl p-4 gap-1'>
-              <h2 className='font-fonseca text-[1.7vw]'>PITCH</h2>
+              <h2 className='font-fonseca text-[2.5vw]'>PITCH</h2>
               <h3 className='width-5/6 text-center font-opensanslight text-[1.5vw]'>
                 Compete for funding and recognition in our pitch competitions.
               </h3>
             </div>
             <div className='flex justify-between flex-col items-center bg-[#482B00] bg-opacity-50 rounded-xl p-4 gap-1'>
-              <h2 className='font-fonseca text-[1.7vw]'>WORKSHOPS</h2>
+              <h2 className='font-fonseca text-[2.5vw]'>WORKSHOPS</h2>
               <h3 className='width-5/6 text-center font-opensanslight text-[1.5vw]'>
                 Learn from experts in interactive workshops and masterclasses.
               </h3>
             </div>
           </div>
           <div className='flex justify-center flex-col items-center'>
-            <h2 className='font-fonseca text-[2vw]'>OUR MISSION</h2>
+            <h2 className='font-fonseca text-[2.5vw]'>OUR MISSION</h2>
             <h4 className='width-5/6 text-center font-opensanslight text-[1.5vw]'>
               To foster entrepreneurship and innovation by providing a platform for students, startups, and industry leaders to connect, collaborate, and create impact.
             </h4>
