@@ -9,6 +9,12 @@ import {useNavigate} from "react-router-dom";
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
 
+import conceptmarketing from './assets/img/CONCEPT MARKETING.png'
+import hackforimpact from './assets/img/hack for impact.png'
+import mixmatch from './assets/img/mix match.png'
+import scaleup from './assets/img/scale up.png'
+
+
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -62,42 +68,42 @@ function Eventslanding() {
                 link={"https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569"}
                 image={banner2}
                 heading="PITCHCAFE 8.0"
-                date="START 6th March 2022"
+                date="START 6th March 2025"
                 mode="Virtual"
               />
               <EventsContainer
               link={"https://unstop.com/competitions/concept-marketing-challenge-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-del-1420328"}
-                image={banner2}
+                image={conceptmarketing}
                 heading="CONCEPT MARKETING CHALLENGE"
-                date="START 6th March 2022"
+                date="START 6th March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
               <EventsContainer
                 link={"https://unstop.com/hackathons/hack-for-impact-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419428"}
-                image={banner2}
+                image={hackforimpact}
                 heading="HACK FOR IMPACT"
                 date="START 7th March 2022"
                 mode="IIIT DELHI, INDIA"
               />
               <EventsContainer
                 link={"https://unstop.com/competitions/scale-up-1-to-100-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419464"}
-                image={banner2}
+                image={scaleup}
                 heading="SCALE UP (1 to 100)"
-                date="START 6th March 2022"
+                date="START 6th March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
               <EventsContainer
                 link={"https://unstop.com/competitions/mix-matched-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420155"}
-                image={banner2}
+                image={mixmatch}
                 heading="MIX-MATCHED"
-                date="START 6th March 2022"
+                date="START 6th March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
               <EventsContainer
                 link={"https://unstop.com/hackathons/0-to-1-ideathon-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420332"}
                 image={banner2}
                 heading="0 TO 1 IDEATHON"
-                date="START 6th March 2022"
+                date="START 6th March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
             </div>
