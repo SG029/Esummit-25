@@ -9,6 +9,16 @@ import { BiChevronRight } from "react-icons/bi";
 import Footer from './Footer';
 
 
+import conceptmarketing from './assets/img/CONCEPT MARKETING.png'
+import hackforimpact from './assets/img/hack for impact.png'
+import mixmatch from './assets/img/mix match.png'
+import scaleup from './assets/img/scale up.png'
+import rnd from './assets/img/rnd venture.png'
+import drone from './assets/img/drone .png'
+import filtercopy from './assets/img/filtercopy.png'
+
+
+
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -53,28 +63,28 @@ function Events() {
                 />
                 <EventsContainer
                 link={"https://unstop.com/competitions/concept-marketing-challenge-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-del-1420328"}
-                  image={banner2}
+                  image={conceptmarketing}
                   heading="CONCEPT MARKETING CHALLENGE"
                   date="START 6th March 2022"
                   mode="IIIT DELHI, INDIA"
                   />
                 <EventsContainer
                   link={"https://unstop.com/hackathons/hack-for-impact-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419428"}
-                  image={banner2}
+                  image={hackforimpact}
                   heading="HACK FOR IMPACT"
                   date="START 7th March 2022"
                   mode="IIIT DELHI, INDIA"
                 />
                 <EventsContainer
                   link={"https://unstop.com/competitions/scale-up-1-to-100-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419464"}
-                  image={banner2}
+                  image={scaleup}
                   heading="SCALE UP (1 to 100)"
                   date="START 6th March 2022"
                   mode="IIIT DELHI, INDIA"
                   />
                 <EventsContainer
                   link={"https://unstop.com/competitions/mix-matched-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420155"}
-                  image={banner2}
+                  image={mixmatch}
                   heading="MIX-MATCHED"
                   date="START 6th March 2022"
                   mode="IIIT DELHI, INDIA"
@@ -88,14 +98,14 @@ function Events() {
                   />
                 <EventsContainer
                   link={"https://unstop.com/competitions/rnd-to-venture-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1425806"}
-                  image={banner2}
+                  image={rnd}
                   heading="RnD TO VENTURE"
                   date="21st-22nd March 2022"
                   mode="IIIT DELHI, INDIA"
                   />
                 <EventsContainer
                   link={"https://unstop.com/workshops-webinars/drone-workshop-your-first-drone-venture-e-summit25-iiit-delhi-indraprastha-institute-of-information-t-1424650"}
-                  image={banner2}
+                  image={drone}
                   heading="DRONE WORKSHOP"
                   date="21st March 2022"
                   mode="IIIT DELHI, INDIA"
@@ -116,7 +126,7 @@ function Events() {
                   />
                 <EventsContainer
                   link={"https://unstop.com/workshops-webinars/filter-copy-content-creation-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-tec-1424579"}
-                  image={banner2}
+                  image={filtercopy}
                   heading="FILTERCOPY CONTENT CREATION WORKSHOP"
                   date="Releasing soon"
                   mode="IIIT DELHI, INDIA"
@@ -131,7 +141,7 @@ function Events() {
             </div>
           <div>
             <a href="https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569">
-              <div className={`mb-10 relative overflow-hidden group flex items-center gap-0 hover:gap-6 transition-all duration-1000 px-6 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[1.7vw] sm:text-[4vw]`}>                  
+              <div className={`mb-10 relative overflow-hidden group flex items-center gap-0 hover:gap-6 transition-all duration-500 px-6 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[1.7vw] sm:text-[4vw]`}>                  
                 {/* Register Text & Icon */}
                 <span className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F] z-10`}>
                   <img className='w-20' src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/white/Unstop-Logo-White-Small.png" alt="unstop" />
