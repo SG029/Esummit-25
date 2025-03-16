@@ -1,37 +1,83 @@
-.event-container{
+/* Existing CSS */
+.event-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 15px;
-    margin-left : 80px;
-    margin-bottom: 15px;
+    row-gap: 3vw; /* Vertical gap between rows */
+    column-gap: 20px; /* Horizontal gap between columns */
+    margin-left: 80px;
+    margin-bottom: 25px;
 }
 
-.e-container:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s, box-shadow 0.3s;
+.e-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
+/* Background Image */
+.bg-image {
+    transition: transform 0.5s ease, filter 0.3s ease;
+    transform: scale(1.2); /* Initial state (no zoom) */
+}
+
+/* Hover Effects */
+.e-container:hover .bg-image {
+    transform: scale(1.1); /* Zoom in the background image */
+    filter: grayscale(100%); /* Black and white effect */
+}
+
+.hover-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.e-container:hover .hover-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay on hover */
+}
+
+.hover-overlay div {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.e-container:hover .hover-overlay div {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Text Styling */
+.text-amber-200 {
+    color: #FFEBA9; /* Yellow text color */
+}
+
+/* Responsive Design */
 @media (min-width: 768px) and (max-width: 1169px) {
-    .event-container{
+    .event-container {
         grid-template-columns: 1fr 1fr;
     }
-    .e-text{
-        color: #FFEBA9;
+    .e-text {
+        color: #FFEBA9; /* Yellow text color */
     }
 }
 
 @media (max-width: 767px) {
-    .event-container{
+    .event-container {
         grid-template-columns: 1fr;
         margin-right: 30px;
         margin-left: 30px;
     }
-    .e-text{
-        color: #FFEBA9;
+    .e-text {
+        color: #FFEBA9; /* Yellow text color */
     }
-    .e-back{
+    .e-back {
         padding-top: 6rem;
     }
+<<<<<<< HEAD
     .e-container{
         width: 100%;
     }
@@ -40,4 +86,9 @@
         font-size: 1rem;
     }
 
+=======
+    .e-container {
+        width: 100%;
+    }
+>>>>>>> sushant
 }
