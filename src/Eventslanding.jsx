@@ -6,7 +6,6 @@ import EventsContainer from './components/events';
 import "./styles/newevents.css"
 import back from "./assets/img/red vector.png";
 import {useNavigate} from "react-router-dom";
-
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
 

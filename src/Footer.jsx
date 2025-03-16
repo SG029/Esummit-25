@@ -8,9 +8,57 @@ import { FaInstagram } from "react-icons/fa"; // Instagram icon
 import { FaLinkedinIn } from "react-icons/fa"; // LinkedIn icon
 import mail from "./assets/img/mail.png"; // Ensure this path is correct
 import "./styles/footer.css";
+import {useNavigate} from "react-router-dom";
 
-function Footer() {
+
+function Footer({aboutRef, eventsRef, speakersRef, sponsorsRef}) {
   const mailboxRef = useRef(null);
+  const navigate = useNavigate();
+
+  // Scroll to About section
+  const scrollToAbout = () => {
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
+    }
+    setTimeout(() => {
+      if (aboutRef.current) {
+        aboutRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Small delay to allow the route change to take effect
+  };
+
+  const scrollToEvent = () => {
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
+    }
+    setTimeout(() => {
+      if (eventsRef.current) {
+        eventsRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Small delay to allow the route change to take effect
+  };
+
+  const scrollToSpeaker = () => {
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
+    }
+    setTimeout(() => {
+      if (speakersRef.current) {
+        speakersRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Small delay to allow the route change to take effect
+  };
+
+  const scrollToSponser = () => {
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
+    }
+    setTimeout(() => {
+      if (sponsorsRef.current) {
+        sponsorsRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); // Small delay to allow the route change to take effect
+  };
 
   // Mailbox animation on mouse move
   const handleMouseMove = (e) => {
@@ -110,15 +158,10 @@ function Footer() {
           <div className="Explore">
             <h3 className='text-[2vw] font-bold text-white text-center font-fonseca mb-3'>Explore</h3>
             <div className="navlinks flex flex-col gap-2">
-              {["About", "Events", "Speakers", "Sponsors", "Contact"].map(
-                (page) => (
-                  <Footerlinks
-                    key={page}
-                    text={page}
-                    onClick={() => handleClick(page.toLowerCase())}
-                  />
-                )
-              )}
+              <Footerlinks text="About" onClick={scrollToAbout} />
+              <Footerlinks text="Events" onClick={scrollToEvent} />
+              <Footerlinks text="Speakers" onClick={scrollToSpeaker} />
+              <Footerlinks text="Sponsors" onClick={scrollToSponser} />
             </div>
           </div>
 

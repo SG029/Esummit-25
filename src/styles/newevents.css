@@ -32,14 +32,12 @@
     .e-back{
         padding-top: 6rem;
     }
-    /* h3{
-        font-size: 1rem;
-    }
-    h2{
-        font-size: 2rem;
-    } */
     .e-container{
         width: 100%;
+    }
+
+    p{
+        font-size: 1rem;
     }
 
 }

@@ -4,7 +4,7 @@ import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useLocation and useNavigate
 import logo from "../assets/E-summit logo.png"; // Import the logo image
 
-function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
+function Navbar({ heroRef, aboutRef,speakersRef, eventsRef, footerRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [buttonPos, setButtonPos] = useState({ x: 0, y: 0 });
   const getWidth = () => window.innerWidth;
@@ -48,7 +48,28 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
     }, 100); // Small delay to allow the route change to take effect
   };
 
-  // Scroll to About section
+  const scrollToSpeakers = () => {
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
+    }
+    setTimeout(() => {
+      if (speakersRef.current) {
+        speakersRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); 
+  }
+
+  const scrollToEvents = () => {
+    if (location.pathname !== "/") {
+      navigate("/"); // Navigate to home route if not already there
+    }
+    setTimeout(() => {
+      if (eventsRef.current) {
+        eventsRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100); 
+  }
+
   const scrollToAbout = () => {
     if (location.pathname !== "/") {
       navigate("/"); // Navigate to home route if not already there
@@ -60,7 +81,6 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
     }, 100); // Small delay to allow the route change to take effect
   };
 
-  // Scroll to Footer section
   const scrollToFooter = () => {
     if (location.pathname !== "/") {
       navigate("/"); // Navigate to home route if not already there
@@ -98,11 +118,11 @@ function Navbar({ heroRef, aboutRef, eventsRef, footerRef }) {
           <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToAbout}>
             About
           </li>
-          <li className="cursor-pointer hover:text-[#059196]">
-            <Link to="/events">Events</Link> {/* Use Link for navigation */}
+          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToEvents}>
+            Events
           </li>
-          <li className="cursor-pointer hover:text-[#059196]">
-            <Link to="/speakers">Speakers</Link> {/* Use Link for navigation */}
+          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToSpeakers}>
+            Speakers {/* Use Link for navigation */}
           </li>
           <li className="cursor-pointer hover:text-[#059196]">
             <Link to="/sponsors">Sponsors</Link> {/* Use Link for navigation */}
