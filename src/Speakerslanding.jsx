@@ -5,6 +5,15 @@ import { motion } from "framer-motion";
 import speaker from "./assets/img/speaker.png"; // Import the speaker image
 import SpeakerCard from "./components/SpeakerCard.jsx"; // Import the reusable component
 import '../src/styles/Speakerslanding.css';
+import ayush from './assets/img/Ayush Sapra.jpg'
+import bipin from './assets/img/Bipin Preet Singh.jpg'
+import sandeep from './assets/img/sandeepjain.jpg'
+import neerav from './assets/img/neerav.jpg'
+import akshit from './assets/img/akshit.jpg'
+import anugreh from './assets/img/anugreh.jpg'
+import natwar from './assets/img/natwar.jpg'
+import smit from './assets/img/smit.jpg'
+
 
 function Speakerslanding() {
   // Define the useInView hook for the first element
@@ -37,10 +46,10 @@ function Speakerslanding() {
         variants={fadeInUp} // Apply the animation variants
         className="about justify-center items-center flex flex-col mt-0"
       >
-        <h1 className="text-[4.5vw] font-bold text-white text-center font-fonseca mt-[5vh]">
+        <h1 className="text-[4.5vw] font-bold text-[#FFEBA9] text-center font-fonseca mt-[5vh]">
           OUR <span className="text-[#059196]">SPEAKERS</span>
         </h1>
-        <h3 className="w-5/6 text-[2.5vw] text-center text-white font-opensanslight leading-10 about-text">
+        <h3 className="w-5/6 text-[2.5vw] text-center text-[#FFEBA9] font-opensanslight leading-10 about-text">
         Learn from industry leaders, successful entrepreneurs, and innovators who are shaping the future of business and technology.
         </h3>
       </motion.div>
@@ -49,110 +58,156 @@ function Speakerslanding() {
   {/* First marquee-inner */}
   <div className="marquee-inner flex gap-[3vw]">
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={ayush}
+      speakerName="AYUSH SAPRA"
+      speakerDesignation="Food Content Creator"
       className="mt-[10vh]"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={bipin}
+      speakerName="BIPIN PREET SINGH"
+      speakerDesignation="Founder of MobiKwik"
       className="mb-0"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={sandeep}
+      speakerName="SANDEEP JAIN"
+      speakerDesignation="Founder of GeeksforGeeks"
       className="mt-[10vh]"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={neerav}
+      speakerName="NEERAV JAIN"
+      speakerDesignation="Founder & CEO of CityFurnish"
+      className="mb-0"
+    />
+    <SpeakerCard
+      backgroundImage={akshit}
+      speakerName="AKSHIT BANSAL"
+      speakerDesignation="Co-Founder of Statiq "
+      className="mt-[10vh]"
+    />
+    <SpeakerCard
+      backgroundImage={anugreh}
+      speakerName="ANUGREH"
+      speakerDesignation="Heading Serenico Labs"
+      className="mb-0"
+    />
+    <SpeakerCard
+      backgroundImage={natwar}
+      speakerName="NATWAR AGRAWAL"
+      speakerDesignation="Founder, and Director of Bucca Bucci"
+      className="mt-[10vh]"
+    />
+    <SpeakerCard
+      backgroundImage={smit}
+      speakerName="SMIT GADA"
+      speakerDesignation="Founder OF Bluer"
       className="mb-0"
     />
   </div>
   <div className="marquee-inner flex gap-[3vw]">
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={ayush}
+      speakerName="AYUSH SAPRA"
+      speakerDesignation="Food Content Creator"
       className="mt-[10vh]"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={bipin}
+      speakerName="BIPIN PREET SINGH"
+      speakerDesignation="Founder of MobiKwik"
       className="mb-0"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={sandeep}
+      speakerName="SANDEEP JAIN"
+      speakerDesignation="Founder of GeeksforGeeks"
       className="mt-[10vh]"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={neerav}
+      speakerName="NEERAV JAIN"
+      speakerDesignation="Founder & CEO of CityFurnish"
+      className="mb-0"
+    />
+    <SpeakerCard
+      backgroundImage={akshit}
+      speakerName="AKSHIT BANSAL"
+      speakerDesignation="Co-Founder of Statiq "
+      className="mt-[10vh]"
+    />
+    <SpeakerCard
+      backgroundImage={anugreh}
+      speakerName="ANUGREH"
+      speakerDesignation="Heading Serenico Labs"
+      className="mb-0"
+    />
+    <SpeakerCard
+      backgroundImage={natwar}
+      speakerName="NATWAR AGRAWAL"
+      speakerDesignation="Founder, and Director of Bucca Bucci"
+      className="mt-[10vh]"
+    />
+    <SpeakerCard
+      backgroundImage={smit}
+      speakerName="SMIT GADA"
+      speakerDesignation="Founder OF Bluer"
       className="mb-0"
     />
   </div>
   <div className="marquee-inner flex gap-[3vw]">
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={ayush}
+      speakerName="AYUSH SAPRA"
+      speakerDesignation="Food Content Creator"
       className="mt-[10vh]"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={bipin}
+      speakerName="BIPIN PREET SINGH"
+      speakerDesignation="Founder of MobiKwik"
       className="mb-0"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={sandeep}
+      speakerName="SANDEEP JAIN"
+      speakerDesignation="Founder of GeeksforGeeks"
       className="mt-[10vh]"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
-      className="mb-0"
-    />
-  </div>
-
-  {/* Second marquee-inner (duplicate of the first) */}
-  <div className="marquee-inner flex gap-[3vw]">
-    <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
-      className="mt-[10vh]"
-    />
-    <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={neerav}
+      speakerName="NEERAV JAIN"
+      speakerDesignation="Founder & CEO of CityFurnish"
       className="mb-0"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={akshit}
+      speakerName="AKSHIT BANSAL"
+      speakerDesignation="Co-Founder of Statiq "
       className="mt-[10vh]"
     />
     <SpeakerCard
-      backgroundImage={speaker}
-      speakerName="SPEAKER"
-      speakerDesignation="Designation"
+      backgroundImage={anugreh}
+      speakerName="ANUGREH"
+      speakerDesignation="Heading Serenico Labs"
+      className="mb-0"
+    />
+    <SpeakerCard
+      backgroundImage={natwar}
+      speakerName="NATWAR AGRAWAL"
+      speakerDesignation="Founder, and Director of Bucca Bucci"
+      className="mt-[10vh]"
+    />
+    <SpeakerCard
+      backgroundImage={smit}
+      speakerName="SMIT GADA"
+      speakerDesignation="Founder OF Bluer"
       className="mb-0"
     />
   </div>
+  
+  
 </div>
     </div>
   );

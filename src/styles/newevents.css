@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 3vw; /* Vertical gap between rows */
-    column-gap: 20px; /* Horizontal gap between columns */
+    column-gap: 3vw; /* Horizontal gap between columns */
     margin-left: 80px;
     margin-bottom: 25px;
 }
@@ -82,7 +82,7 @@
     }
 
     p{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
 }

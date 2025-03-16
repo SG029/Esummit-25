@@ -9,7 +9,7 @@ const SpeakerCard = ({
 }) => {
   return (
     <div
-      className={`speaker-div min-w-[17vw] h-[80%] rounded-3xl shadow-xl shadow-[#000]/70 bg-cover bg-center bg-no-repeat ${className}`} // Add dynamic className
+      className={`speaker-div w-[15vw] h-[80%] rounded-3xl shadow-xl shadow-[#000]/70 bg-cover bg-center bg-no-repeat ${className}`} // Add dynamic className
       style={{ backgroundImage: `url(${backgroundImage})` }} // Dynamic background image
     >
       {/* Overlay with gradient */}
