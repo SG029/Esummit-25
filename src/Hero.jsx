@@ -91,8 +91,6 @@ function Hero() {
       const progress = scrollY / (documentHeight - windowHeight);
       setScrollProgress(progress);
 
-      // Debug: Log scroll progress
-      console.log("Scroll Progress:", progress);
     };
 
     window.addEventListener("scroll", handleScroll);

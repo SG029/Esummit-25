@@ -3,7 +3,7 @@ import React from "react";
 function Footerlinks({ text, onClick }) {
   return (
     <div
-      className="h-7 overflow-hidden cursor-pointer"
+      className="h-8 overflow-hidden cursor-pointer "
       onClick={onClick}
     >
       <div className=" hover:translate-y-[-50%] font-opensanslight transition-all duration-300 ease-out text-white hover:text-[#fff] flex flex-col">

@@ -26,6 +26,7 @@ function App() {
   // Create refs for Hero, About, Events, and Footer sections
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
+  const speakersRef = useRef(null);
   const eventsRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -184,7 +185,7 @@ function App() {
               />
 
               {/* Navbar */}
-              <Navbar heroRef={heroRef} aboutRef={aboutRef} eventsRef={eventsRef} footerRef={footerRef} />
+              <Navbar heroRef={heroRef} aboutRef={aboutRef} speakersRef={speakersRef} eventsRef={eventsRef} footerRef={footerRef} />
 
               {/* Page Content */}
               <Routes>
@@ -198,16 +199,18 @@ function App() {
                       <div ref={aboutRef}>
                         <About />
                       </div>
-                      <Eventslanding />
-                      <Speakerslanding />
+                      <div ref={eventsRef}>
+                        <Eventslanding />
+                      </div>
+                      <div ref={speakersRef}>
+                        <Speakerslanding/>  
+                      </div>
                       <div ref={footerRef}>
-                        <Footer />
+                        <Footer aboutRef = {aboutRef} eventsRef={eventsRef} speakersRef ={speakersRef} sponsorsRef = {null}/>
                       </div>
                     </>
                   }
                 />
-                <Route path="/speakers" element={<Speaker />} />
-                <Route path="/events" element={<Events />} />
                 <Route path="/sponsors" element={<Sponsors />} />
                 
               </Routes>
