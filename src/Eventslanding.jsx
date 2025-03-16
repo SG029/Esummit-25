@@ -4,7 +4,7 @@ import banner2 from './assets/img/e1.png';
 // import "@fontsource/open-sans-condensed"
 import EventsContainer from './components/events';
 import "./styles/newevents.css"
-import back from "./assets/img/red vector.png";
+import redvector from "./assets/img/red vector.png";
 import {useNavigate} from "react-router-dom";
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
@@ -46,7 +46,7 @@ function Eventslanding() {
           }}
         >
           <div style={{
-            backgroundImage: `url(${back})`,
+            backgroundImage: `url(${redvector})`,
             backgroundSize: 'cover',
             width: '100%',
             height: '100%',
