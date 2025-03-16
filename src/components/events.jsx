@@ -3,7 +3,7 @@ import { SlCalender } from "react-icons/sl";
 import { IoLocationOutline } from "react-icons/io5";
 import "../styles/newevents.css";
 
-function EventsContainer({ image, heading, date, mode,link }) {
+function EventsContainer({ image, heading, date,mode,link }) {
     return (
         <div className="e-container w-[60vh] h-[50vh] cursor-pointer relative" style={{
             backgroundImage: `url(${image})`,
