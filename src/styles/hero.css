@@ -1,0 +1,9 @@
+@media (max-width: 768px){
+    .main-text{
+        font-size: 12vh;
+    }
+
+    .sub-main{
+        font-size: 4vh;
+    }
+}

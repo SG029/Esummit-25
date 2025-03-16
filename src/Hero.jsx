@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import herobg from "./assets/img/herobg.png";
 import Timer from "./components/timer";
 import Register from "./components/register";
+import "./styles/hero.css";
 
 // Custom hook to check if the screen is mobile
 function useIsMobile() {
@@ -40,7 +41,7 @@ function TypewriterText({ text, delay }) {
       {text.split("").map((char, index) => (
         <motion.span
           key={index}
-          className="inline-block mr-[0.3vw]" // Adds spacing between letters
+          className="sub-main inline-block mr-[0.3vw]" // Adds spacing between letters
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1 },
@@ -90,8 +91,6 @@ function Hero() {
       const progress = scrollY / (documentHeight - windowHeight);
       setScrollProgress(progress);
 
-      // Debug: Log scroll progress
-      console.log("Scroll Progress:", progress);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -110,7 +109,7 @@ function Hero() {
     >
       {/* Main heading with rising animation */}
       <motion.h1
-        className="text-[16vw] md:text-[12vw] sm:text-[8vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw]"
+        className="main-text text-[16vw] md:text-[12vw] sm:text-[8vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw]"
         initial={{ y: "20vh", opacity: 1 }} // Start at the center of the screen
         animate={{ y: "00vh", opacity: 1 }} // Rise to the final position
         transition={{ duration: 1.2, ease: "easeOut" }} // Smooth animation
