@@ -212,7 +212,7 @@ function App() {
                   }
                 />
                 <Route path="/sponsors" element={<Sponsors />} />
-                
+                <Route path="/events" element={<Events />} />
               </Routes>
             </motion.div>
           )}
