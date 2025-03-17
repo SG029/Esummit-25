@@ -14,8 +14,10 @@ import Loader from "./components/Loader";
 import bluevector from "./assets/img/Vector 2.png"; // Import the bluevector image
 import bluevector2 from "./assets/img/Vector 2.png"; // Import the bluevector2 image
 import yellowvector from "./assets/img/yellow vector.png"; // Import the yellowvector image
+import redvector from "./assets/img/red vector.png"; // Import the redvector image
 import Speakerslanding from "./Speakerslanding";
-import Workshops from './Workshops'
+import Workshops from './Workshops';
+import blue2 from './assets/img/blue2.png'
 
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -23,6 +25,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(window.innerWidth < 2000 && window.innerWidth > 1130);
   const [scrollProgress, setScrollProgress] = useState(0); // Track scroll progress
   const [isBlueVectorFinal, setIsBlueVectorFinal] = useState(false); // Track if bluevector has reached its final destination
+  const [scrollVh, setScrollVh] = useState(0); // Track scroll position in vh
 
   // Create refs for Hero, About, Events, and Footer sections
   const heroRef = useRef(null);
@@ -41,6 +44,10 @@ function App() {
       // Calculate scroll progress (0 to 1)
       const progress = scrollY / (documentHeight - windowHeight);
       setScrollProgress(progress);
+
+      // Calculate scroll position in vh
+      const scrollVh = scrollY / windowHeight;
+      setScrollVh(scrollVh);
 
       // Trigger the transition to bluevector2 when bluevector reaches its final position
       if (progress >= 0.99) {
@@ -155,18 +162,47 @@ function App() {
               )}
 
               {/* Yellowvector */}
-              <motion.img
-                src={yellowvector}
-                alt=""
-                className="fixed top-0 -right-[20vw] w-[100vw] mt-[10vh] -z-1"
-                style={{
-                  height: "calc(130vh + 10vh)",
-                  width: "calc(100vw + 10vw)",
-                  transform: `translate(${scrollProgress * -100}vw, ${scrollProgress * -100}vh) rotate(${scrollProgress * -30}deg)`, // Move to the top-left and rotate anticlockwise
-                  opacity: scrollProgress * 5, // Fade in yellowvector as scroll progresses
-                }}
-              />
+<motion.img
+  src={yellowvector}
+  alt=""
+  className="fixed top-0 -right-[20vw] w-[100vw] mt-[10vh] -z-1"
+  style={{
+    height: "calc(130vh + 10vh)",
+    width: "calc(100vw + 10vw)",
+    transform: `translate(${scrollProgress * -100}vw, ${scrollProgress * -100}vh) rotate(${scrollProgress * -30}deg)`, // Move to the top-left and rotate anticlockwise
+    opacity: scrollVh < 1.8 ? scrollProgress * 7 : Math.max(0, 1 - (scrollVh - 1.8) * 5), // Fade out yellowvector when redvector appears
+  }}
+/>
 
+{/* Redvector (appears between 200vh and 400vh) */}
+{/* Redvector (appears between 200vh and 400vh) */}
+{scrollVh >= 2.1 && scrollVh <= 4 && (
+  <motion.img
+    src={redvector}
+    alt=""
+    className="fixed top-0 -left-[20vw] w-[100vw] mt-[10vh] -z-1"
+    style={{
+      height: "calc(130vh + 10vh)",
+      width: "calc(100vw + 10vw)",
+      transform: `translate(${Math.pow((scrollVh - 2.1), 0.3) * 30}vw, ${scrollProgress * -100}vh) rotate(${(scrollVh - 2.2) * 10}deg)`, // Slower movement from left to right
+      opacity: Math.min(1, (scrollVh - 2.1) * 6), // Fade in redvector more slowly
+    }}
+  />
+)}
+
+{scrollVh >= 4 && scrollVh <= 5 && (
+  <motion.img
+    src={blue2}
+    alt=""
+    className="fixed bottom-0 -right-[35vw] w-[100vw] -z-1"
+    style={{
+      height: "60vh", // Fixed height of 60vh
+      width: "200vw", // Fixed width of 200vw
+      transform: `translate(${Math.pow((scrollVh - 4), 0.3) * -50}vw, 0)`, // Move from right to left
+      opacity: Math.min(1, (scrollVh - 4) * 5), // Fade in slowly
+    }}
+  />
+)}
               {/* Magnetic Cursor */}
               <motion.div
                 className="cursorrr fixed pointer-events-none rounded-full bg-[#059196] z-50"
@@ -219,6 +255,7 @@ function App() {
                 />
                 <Route path="/sponsors" element={<Sponsors />} />
                 <Route path="/events" element={<Events />} />
+                <Route path="/speakers" element={<Speaker />} /> {/* Add this route */}
               </Routes>
             </motion.div>
           )}
