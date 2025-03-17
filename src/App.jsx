@@ -15,6 +15,7 @@ import bluevector from "./assets/img/Vector 2.png"; // Import the bluevector ima
 import bluevector2 from "./assets/img/Vector 2.png"; // Import the bluevector2 image
 import yellowvector from "./assets/img/yellow vector.png"; // Import the yellowvector image
 import Speakerslanding from "./Speakerslanding";
+import Workshops from './Workshops'
 
 function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -206,6 +207,9 @@ function App() {
                       </div>
                       <div ref={speakersRef}>
                         <Speakerslanding />
+                      </div>
+                      <div >
+                        <Workshops />
                       </div>
                       <div ref={footerRef}>
                         <Footer aboutRef={aboutRef} eventsRef={eventsRef} speakersRef={speakersRef} sponsorsRef={null} />
