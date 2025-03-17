@@ -6,6 +6,7 @@ import "../styles/newevents.css";
 function EventsContainer({ image, heading, date, mode, link }) {
     const ref = useRef(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [isHovered, setIsHovered] = useState(false);
 
     const handleMouse = (e) => {
         const { clientX, clientY } = e;
@@ -27,7 +28,11 @@ function EventsContainer({ image, heading, date, mode, link }) {
         <div
             ref={ref}
             onMouseMove={handleMouse}
-            onMouseLeave={reset}
+            onMouseLeave={() => {
+                reset();
+                setIsHovered(false);
+            }}
+            onMouseEnter={() => setIsHovered(true)}
             style={{
                 transform: `translate(${x}px, ${y}px)`,
                 transition: "transform 0.2s ease-out",
@@ -39,8 +44,18 @@ function EventsContainer({ image, heading, date, mode, link }) {
                 className="bg-image absolute inset-0 bg-cover bg-center transition-all duration-300"
                 style={{
                     backgroundImage: `url(${image})`,
+                    transform: isHovered ? "scale(1.1)" : "scale(1)",
                 }}
             ></div>
+
+            {/* Gradient Overlay */}
+            <div
+    className="absolute inset-0"
+    style={{
+        background: "linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0) 80%)",
+    }}
+></div>
+
 
             {/* Link Wrapper */}
             <a
@@ -49,18 +64,16 @@ function EventsContainer({ image, heading, date, mode, link }) {
                 rel="noreferrer"
                 className="absolute inset-0 w-full h-full"
             >
-                {/* Hover Overlay */}
-                <div className="hover-overlay absolute inset-0 bg-black bg-opacity-0 flex items-center justify-center transition-all duration-300">
-                    <div className="text-amber-200 text-[1.8vw] font-opensanslight opacity-0 transition-opacity duration-300 text-center">
-                        <p className="mb-1 font-fonseca">{heading}</p>
-                        <div className="date flex items-center gap-2 mb-1 justify-center">
-                            <SlCalender className="c-amber-200" />
-                            <h3 className="c-amber-200">{date}</h3>
-                        </div>
-                        <div className="flex items-center gap-2 justify-center">
-                            <IoLocationOutline className="c-amber-200" />
-                            <h3 className="c-amber-200">{mode}</h3>
-                        </div>
+                {/* Text Container at Bottom */}
+                <div className="text-container absolute bottom-0 left-0 right-0 p-4 text-amber-200 text-[1.8vw] font-opensanslight text-center">
+                    <p className="mb-1 font-fonseca">{heading}</p>
+                    <div className="date flex items-center gap-2 mb-1 justify-center">
+                        <SlCalender className="c-amber-200" />
+                        <h3 className="c-amber-200">{date}</h3>
+                    </div>
+                    <div className="flex items-center gap-2 justify-center">
+                        <IoLocationOutline className="c-amber-200" />
+                        <h3 className="c-amber-200">{mode}</h3>
                     </div>
                 </div>
             </a>

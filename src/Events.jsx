@@ -280,7 +280,7 @@ function Events() {
       }}
     >
       <div className=' mt-[20vh]'>
-        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold -mb-[10vh]'>WORKSHOPS</h1>
+        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold mb-[0vh]'>WORKSHOPS</h1>
       </div>
       <div className="event-container mt-[15vh] width-[90%] px-5 py-5 flex flex-col" style={{
         
@@ -302,7 +302,7 @@ function Events() {
         })}
       </div>
       <div className=' mt-[10vh]'>
-        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold -mb-[10vh]'>EVENTS</h1>
+        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold mb-[0vh]'>EVENTS</h1>
       </div>
       <div className="event-container mt-[15vh] width-[90%] px-5 py-5 flex flex-col" style={{
         
@@ -324,7 +324,7 @@ function Events() {
         })}
       </div>
       <div className=' mt-[10vh]'>
-        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold -mb-[10vh]'>PANEL</h1>
+        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold mb-[0vh]'>PANEL</h1>
       </div>
       <div className="event-container mt-[15vh] width-[90%] px-5 py-5 flex flex-col" style={{
         
@@ -346,7 +346,7 @@ function Events() {
         })}
       </div>
       <div className=' mt-[10vh]'>
-        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold -mb-[10vh]'>CLUB EVENTS</h1>
+        <h1 className='events-head text-[6vw] font-fonseca text-[#FFEBA9] font-bold mb-[0vh]'>CLUB EVENTS</h1>
       </div>
       <div className="event-container mt-[15vh] width-[90%] px-5 py-5 flex flex-col" style={{
         
