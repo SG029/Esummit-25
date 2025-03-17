@@ -1,11 +1,13 @@
-/* Existing CSS */
 .event-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
     row-gap: 3vw; /* Vertical gap between rows */
     column-gap: 3vw; /* Horizontal gap between columns */
-    margin-left: 80px;
-    margin-bottom: 25px;
+    justify-content: center; /* Center the grid horizontally */
+    margin: 0 auto; /* Center the container itself on the x-axis */
+    margin-bottom: 25px; /* Bottom margin */
+    width: 90%; /* Adjust width to fit within the parent */
+    max-width: 1200px; /* Optional: Set a max-width for larger screens */
 }
 
 .e-container {
