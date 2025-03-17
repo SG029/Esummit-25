@@ -9,7 +9,7 @@ import {useNavigate} from "react-router-dom";
 import { BiChevronRight } from "react-icons/bi";
 import { useState, useEffect } from "react";
 import canva from './assets/img/canva.png'
-import drone from './assets/img/drone .png'
+import drone from './assets/img/drone.png'
 import filtercopy from './assets/img/filtercopy.png'
 
 

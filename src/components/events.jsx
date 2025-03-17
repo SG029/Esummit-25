@@ -32,7 +32,7 @@ function EventsContainer({ image, heading, date, mode, link }) {
                 transform: `translate(${x}px, ${y}px)`,
                 transition: "transform 0.2s ease-out",
             }}
-            className="e-container w-[60vh] h-[40vh] cursor-pointer relative overflow-hidden"
+            className="e-container w-[60vh] h-[75vh] cursor-pointer relative overflow-hidden"
         >
             {/* Background Image */}
             <div
