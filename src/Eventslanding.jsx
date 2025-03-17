@@ -13,6 +13,7 @@ import conceptmarketing from './assets/img/CONCEPT MARKETING.png'
 import hackforimpact from './assets/img/hack for impact.png'
 import mixmatch from './assets/img/mix match.png'
 import scaleup from './assets/img/scale up.png'
+import ideathon from './assets/img/ideathon.png'
 
 
 function useIsMobile() {
@@ -46,10 +47,10 @@ function Eventslanding() {
           }}
         >
           <div style={{
-            backgroundImage: `url(${redvector})`,
-            backgroundSize: 'cover',
-            width: '100%',
-            height: '100%',
+            // backgroundImage: `url(${redvector})`,
+            // backgroundSize: 'cover',
+            // width: '100%',
+            // height: '100%',
           }}>
             <div className='top-0' >
               <div>
@@ -68,42 +69,42 @@ function Eventslanding() {
                 link={"https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569"}
                 image={banner2}
                 heading="PITCHCAFE 8.0"
-                date="START 6th March 2025"
+                date="21st-22nd March 2025"
                 mode="Virtual"
               />
               <EventsContainer
               link={"https://unstop.com/competitions/concept-marketing-challenge-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-del-1420328"}
                 image={conceptmarketing}
                 heading="CONCEPT MARKETING CHALLENGE"
-                date="START 6th March 2025"
+                date="21st March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
               <EventsContainer
                 link={"https://unstop.com/hackathons/hack-for-impact-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419428"}
                 image={hackforimpact}
                 heading="HACK FOR IMPACT"
-                date="START 7th March 2022"
+                date="21st-22nd March 2022"
                 mode="IIIT DELHI, INDIA"
               />
               <EventsContainer
                 link={"https://unstop.com/competitions/scale-up-1-to-100-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419464"}
                 image={scaleup}
                 heading="SCALE UP (1 to 100)"
-                date="START 6th March 2025"
+                date="22nd March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
               <EventsContainer
                 link={"https://unstop.com/competitions/mix-matched-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420155"}
                 image={mixmatch}
                 heading="MIX-MATCHED"
-                date="START 6th March 2025"
+                date="21st March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
               <EventsContainer
                 link={"https://unstop.com/hackathons/0-to-1-ideathon-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420332"}
-                image={banner2}
+                image={ideathon}
                 heading="0 TO 1 IDEATHON"
-                date="START 6th March 2025"
+                date="22nd March 2025"
                 mode="IIIT DELHI, INDIA"
                 />
             </div>
@@ -119,14 +120,14 @@ function Eventslanding() {
                       {/* Animated Overlay */}
                       <div className="absolute inset-0 bg-white rounded-full h-[30vw] w-[40vw] 
                         transform -translate-x-full translate-y-0 
-                        transition-all duration-[800ms] group-hover:translate-x-[-40%] group-hover:translate-y-[-40%]">
+                        transition-all duration-[700ms] group-hover:translate-x-[-40%] group-hover:translate-y-[-40%]">
                       </div>
               
                       {/* Register Text & Icon */}
-                      <span className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F] z-10`}>
+                      <span className={`relative transition-all duration-500 group-hover:text-[#AA1E0F] z-10`}>
                         MORE EVENTS
                       </span>
-                      <BiChevronRight className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F] z-10 ${isMobile ? 'text-[8vw]' : 'text-[3vw]'} md:text-[3vw] sm:text-[5vw]`} />
+                      <BiChevronRight className={`relative transition-all duration-500 group-hover:text-[#AA1E0F] z-10 ${isMobile ? 'text-[8vw]' : 'text-[3vw]'} md:text-[3vw] sm:text-[5vw]`} />
                     </div>
                   </a>
             </div>

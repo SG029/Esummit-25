@@ -61,21 +61,23 @@ function App() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  // Handle cursor size change on hover
+  // Handle cursor size change on hover over <h1> elements
   useEffect(() => {
-    const handleMouseEnter = () => setCursorSize(100);
-    const handleMouseLeave = () => setCursorSize(25);
+    const handleMouseEnter = () => setCursorSize(100); // Increase cursor size on hover
+    const handleMouseLeave = () => setCursorSize(25); // Reset cursor size on leave
 
-    // Select elements that should trigger cursor expansion
-    const interactiveElements = document.querySelectorAll("h1");
+    // Select all <h1> elements
+    const h1Elements = document.querySelectorAll("h1");
 
-    interactiveElements.forEach((el) => {
+    // Add event listeners to each <h1> element
+    h1Elements.forEach((el) => {
       el.addEventListener("mouseenter", handleMouseEnter);
       el.addEventListener("mouseleave", handleMouseLeave);
     });
 
+    // Cleanup event listeners on component unmount
     return () => {
-      interactiveElements.forEach((el) => {
+      h1Elements.forEach((el) => {
         el.removeEventListener("mouseenter", handleMouseEnter);
         el.removeEventListener("mouseleave", handleMouseLeave);
       });
@@ -86,7 +88,7 @@ function App() {
   const handleVideoEnd = () => {
     setIsLoading(false); // Hide loader and show the rest of the app
 
-    // Delay the transition to bluevector2 by 1 second
+    // Delay the transition to bluevector2 by 1.5 seconds
     setTimeout(() => {
       setIsBlueVectorFinal(true);
     }, 1500);
@@ -203,16 +205,16 @@ function App() {
                         <Eventslanding />
                       </div>
                       <div ref={speakersRef}>
-                        <Speakerslanding/>  
+                        <Speakerslanding />
                       </div>
                       <div ref={footerRef}>
-                        <Footer aboutRef = {aboutRef} eventsRef={eventsRef} speakersRef ={speakersRef} sponsorsRef = {null}/>
+                        <Footer aboutRef={aboutRef} eventsRef={eventsRef} speakersRef={speakersRef} sponsorsRef={null} />
                       </div>
                     </>
                   }
                 />
                 <Route path="/sponsors" element={<Sponsors />} />
-                <Route path="/events" element={<Events />} />
+                <Route path="/events" element={<Events />} />
               </Routes>
             </motion.div>
           )}

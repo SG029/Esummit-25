@@ -69,8 +69,8 @@ function Footer({aboutRef, eventsRef, speakersRef, sponsorsRef}) {
       const offsetX = e.clientX - (rect.left + rect.width / 2);
       const offsetY = e.clientY - (rect.top + rect.height / 2);
 
-      const x = offsetX * 0.1;
-      const y = offsetY * 0.1;
+      const x = offsetX * 0.3;
+      const y = offsetY * 0.5;
 
       requestAnimationFrame(() => {
         mailbox.style.transform = `translate(${x}px, ${y}px)`;
@@ -143,7 +143,7 @@ function Footer({aboutRef, eventsRef, speakersRef, sponsorsRef}) {
                 alt="Mail Icon"
                 className="mail-icon w-7 transition-all duration-300 group-hover:filter group-hover:brightness-0"
               />
-              <h2 className="text-xl pl-2">ecell@iiitd.ac.in</h2>
+              <h2 className="text-xl pl-2">esummit@iiitd.ac.in</h2>
             </div>
           </a>
         </div>
@@ -170,7 +170,7 @@ function Footer({aboutRef, eventsRef, speakersRef, sponsorsRef}) {
             <h3 className='text-[2vw] font-bold text-white text-center font-fonseca mb-3'>Socials</h3>
             <div className='flex flex-col gap-2 text-white'>
               <Footersocials text="LinkedIn" icon={FaLinkedinIn} onClick={() => window.open("https://www.linkedin.com/company/iiitdecell/?originalSubdomain=in", "_blank")} />
-              <Footersocials text="Instagram" icon={FaInstagram} onClick={() => window.open("https://www.instagram.com/ecell_iiitd/", "_blank")} />
+              <Footersocials text="Instagram" icon={FaInstagram} onClick={() => window.open("https://www.instagram.com/esummit_iiitd/?hl=en", "_blank")} />
             </div>
           </div>
         </div>

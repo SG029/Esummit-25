@@ -183,16 +183,16 @@ function Hero() {
       {/* Scroll Down Button */}
       <div 
         onClick={handleScroll} // Attach the scroll handler
-        className="cursor-pointer absolute left-[5vw] bottom-[5vh] flex items-center justify-center group"
+        className="cursor-pointer absolute left-[7vw] bottom-[5vh] flex items-center justify-center group"
       >
         {/* Circle scales and fills white on hover */}
         <div
-          className="scrollclick cursor-pointer h-28 w-28 rounded-full border-2 border-white bg-transparent group-hover:bg-white group-hover:scale-50 transition-all duration-500 ease-in-out flex items-center justify-center"
+          className="scrollclick cursor-pointer h-28 w-28 rounded-full border-2 border-white bg-transparent group-hover:bg-[#AA1E0F] group-hover:scale-50  transition-all duration-500 ease-in-out flex items-center justify-center"
         >
           {/* Down Arrow */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 text-white group-hover:text-black transition-all duration-500 ease-in-out"
+            className="h-8 w-8 text-white group-hover:text-white transition-all duration-500 ease-in-out"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

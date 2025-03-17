@@ -5,6 +5,7 @@ import herobg from "./assets/img/herobg.png";
 import aboutleft from "./assets/img/aboutleft.png"; // Ensure this path is correct
 import "./styles/mission.css";
 import "./styles/about.css";
+import iiit from "./assets/img/iiit.jpg";
 
 function About() {
   const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -46,11 +47,15 @@ function About() {
         initial="hidden"
         animate={inView2 ? "visible" : "hidden"}
         variants={fadeInUp}
-        className='flex justify-between w-5/6 mt-8 gap-[6vw] mission-container mb-[5vh]'
+        className='flex justify-between item-center w-5/6 mt-8 gap-[6vw] mission-container mb-[5vh]'
       >
-        <div className='mic-image w-1/2'>
-          <img src={aboutleft} alt="About Left" className='w-full h-auto' />
-        </div>
+        <div className="mic-image w-1/2 flex items-center justify-center">
+  <img
+    src={iiit}
+    alt={iiit}
+    className="w-full h-auto rounded-lg border-3 border-[#046C70] shadow-[0_8px_20px_rgba(0,0,0,0.6)]"
+  />
+</div>
         <motion.div
           ref={ref3}
           initial="hidden"

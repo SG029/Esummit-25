@@ -37,8 +37,8 @@ const Timer = () => {
           key={index}
           className="text-center border-2 border-white py-3 w-[11vw] rounded-lg bg-black/40 backdrop-blur-md"
         >
-          <p className="text-3xl">{value}</p>
-          <p className="text-[1.5vw] -mt-[0vw] font-light">{unit}</p>
+          <p className="text-2xl">{value}</p>
+          <p className="text-[1.7vw] -mt-[0vw] font-light">{unit}</p>
         </div>
       ))}
     </div>
