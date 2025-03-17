@@ -52,15 +52,15 @@ function Eventslanding() {
             // width: '100%',
             // height: '100%',
           }}>
-            <div className='top-0' >
+            <div className='top-0 flex flex-col items-center justify-center mb-[10vh]' >
               <div>
-                <h1 className='text-[4.5vw] font-bold text-center font-fonseca mt-[10vw]'>
+                <h1 className='headdd text-[4.5vw] font-bold text-center font-fonseca mt-[10vw]'>
                   <span className='text-amber-200'>FEATURED </span> 
                   <span className='e-text text-red-700'>EVENTS</span>
                 </h1>
               </div>
-              <div className='w-[100%] text-center '>
-                <p className='text-amber-200 text-[2.5vw] font-opensanslight'>Explore our lineup of exciting events designed to inspire, educate and connect entrepreneurs at all stages</p>
+              <div className='w-[80%] text-center '>
+                <p className='paraaa text-amber-200 text-[2.5vw] font-opensanslight leading-10'>Explore our lineup of exciting events designed to inspire, educate and connect entrepreneurs at all stages</p>
               </div>
             </div>
             

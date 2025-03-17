@@ -183,7 +183,7 @@ function Hero() {
       {/* Scroll Down Button */}
       <div 
         onClick={handleScroll} // Attach the scroll handler
-        className="cursor-pointer absolute left-[7vw] bottom-[5vh] flex items-center justify-center group"
+        className="cursor-pointerrr absolute left-[7vw] bottom-[5vh] flex items-center justify-center group"
       >
         {/* Circle scales and fills white on hover */}
         <div

@@ -44,9 +44,9 @@ function Speakerslanding() {
         initial="hidden" // Initial animation state
         animate={inView1 ? "visible" : "hidden"} // Animate when in view
         variants={fadeInUp} // Apply the animation variants
-        className="about justify-center items-center flex flex-col mt-0"
+        className=" justify-center items-center flex flex-col mt-0"
       >
-        <h1 className="text-[4.5vw] font-bold text-[#FFEBA9] text-center font-fonseca mt-[5vh]">
+        <h1 className="speak-head text-[4.5vw] font-bold text-[#FFEBA9] text-center font-fonseca mt-[5vh]">
           OUR <span className="text-[#059196]">SPEAKERS</span>
         </h1>
         <h3 className="w-5/6 text-[2.5vw] text-center text-[#FFEBA9] font-opensanslight leading-10 about-text">

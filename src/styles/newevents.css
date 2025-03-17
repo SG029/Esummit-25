@@ -50,18 +50,10 @@
     opacity: 1; /* Show text on hover */
 }
 
-/* Text Styling */
-.text-amber-200 {
-    color: #FFEBA9; /* Yellow text color */
-}
-
 /* Responsive Design */
 @media (min-width: 768px) and (max-width: 1169px) {
     .event-container {
         grid-template-columns: 1fr 1fr;
-    }
-    .e-text {
-        color: #FFEBA9; /* Yellow text color */
     }
 }
 
@@ -71,13 +63,20 @@
         margin-right: 30px;
         margin-left: 30px;
     }
-    .e-text {
-        color: #FFEBA9; /* Yellow text color */
+
+    /* Set font size of <p> to 10vw in phone view */
+    .paraaa {
+        font-size: 8vw;
     }
+    .headdd{
+        font-size: 13vw;
+    }
+
     .e-back {
         padding-top: 6rem;
     }
-    .e-container{
+
+    .e-container {
         width: 100%;
     }
 }
