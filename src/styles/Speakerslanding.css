@@ -24,10 +24,5 @@
 @media (max-width: 768px) {
     h1{
       white-space: nowrap;
-        font-size: 9vh;
-    }
-    
-    h3{
-        font-size: 3.5vh;
     }
 }

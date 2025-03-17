@@ -1,9 +1,9 @@
 @media (max-width: 768px){
     .main-text{
-        font-size: 12vh;
+        font-size: 10vh;
     }
 
     .sub-main{
-        font-size: 4vh;
+        font-size: 2vh;
     }
 }
