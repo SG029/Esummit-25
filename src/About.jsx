@@ -37,7 +37,7 @@ function About() {
         <h1 className='text-[4.5vw] font-bold text-black text-center font-fonseca mt-[5vh]'>
           ABOUT E-SUMMIT
         </h1>
-        <h3 className='w-5/6 text-[2.5vw] text-center text-black font-opensanslight leading-10 about-text'>
+        <h3 className='w-4/6 text-[2.5vw] text-center text-black font-opensanslight leading-10 about-text'>
           E-Summit is the flagship entrepreneurship summit organized to promote innovation, entrepreneurship, and leadership among students and professionals.
         </h3>
       </motion.div>
