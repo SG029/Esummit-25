@@ -62,6 +62,13 @@ function Hero() {
   const [showNewRegister, setShowNewRegister] = useState(false); // State to control which register to show
   const [scrollProgress, setScrollProgress] = useState(0); // Track scroll progress
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: window.innerHeight, // Scroll down 100vh
+      behavior: 'smooth', // Smooth scrolling
+    });
+  };
+
   // Show the button after 4 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -99,7 +106,7 @@ function Hero() {
 
   return (
     <div
-      className="w-full h-[100vh] flex flex-col items-center justify-center overflow-hidden"
+      className="w-full h-[100vh] flex flex-col items-center justify-center overflow-hidden relative"
       style={{
         backgroundImage: `url(${herobg})`,
         backgroundSize: "cover", // Ensures the image covers the entire container
@@ -172,6 +179,29 @@ function Hero() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Scroll Down Button */}
+      <div 
+        onClick={handleScroll} // Attach the scroll handler
+        className="cursor-pointer absolute left-[5vw] bottom-[5vh] flex items-center justify-center group"
+      >
+        {/* Circle scales and fills white on hover */}
+        <div
+          className="scrollclick cursor-pointer h-28 w-28 rounded-full border-2 border-white bg-transparent group-hover:bg-white group-hover:scale-50 transition-all duration-500 ease-in-out flex items-center justify-center"
+        >
+          {/* Down Arrow */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8 text-white group-hover:text-black transition-all duration-500 ease-in-out"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
     </div>
   );
 }

@@ -6,4 +6,7 @@
     .sub-main{
         font-size: 4vh;
     }
+    .cursor-pointer{
+        display:none;
+    }
 }
