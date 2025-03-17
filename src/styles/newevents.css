@@ -79,4 +79,7 @@
     .e-container {
         width: 100%;
     }
+    .events-head{
+        font-size: 15vw;
+    }
 }
