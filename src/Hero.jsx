@@ -143,11 +143,14 @@ function Hero() {
 
       {/* Timer component */}
       <motion.div
+      className="flex items-center justify-center -mt-[5vw]"
         style={{
           y: `${scrollProgress * -150}vh`, // Move up based on scroll progress
         }}
       >
+        <span className="text-[10vw]">💣</span>
         <Timer />
+        <span className="text-[10vw]">💣</span>
       </motion.div>
 
       {/* Register Button Animation */}
