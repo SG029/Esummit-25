@@ -53,12 +53,12 @@ const Timer = () => {
       {Object.entries(timeLeft).map(([unit, value], index) => (
         <div
           key={index}
-          className="text-center border-2 border-white py-3 w-[20vw] rounded-lg bg-black/40 backdrop-blur-md"
+          className={`text-center border-2 border-white py-3 ${isMobile ? 'w-[20vw]' : 'w-[11vw]'} rounded-lg bg-black/40 backdrop-blur-md`}
         >
           {/* Upper p element */}
-          <p className={`text-2xl ${isMobile ? 'text-[6vw]' : 'text-[5vw]'}`}>{value}</p>
+          <p className={`text-2xl ${isMobile ? 'text-[6vw]' : 'text-[2vw]'}`}>{value}</p>
           {/* Bottom p element */}
-          <p className={`text-[1.7vw] -mt-[0vw] font-light ${isMobile ? 'text-[4vw]' : 'text-[5vw]'}`}>
+          <p className={`text-[1.7vw] -mt-[0vw] font-light ${isMobile ? 'text-[4vw]' : 'text-[1.8vw]'}`}>
             {unit}
           </p>
         </div>
