@@ -34,7 +34,8 @@ const workshops = [{
   image: drone,
   heading: "Drone Workshop",
   date: "21st March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"TBD"
 },
 {
   link: "https://unstop.com/workshops-webinars/filter-copy-content-creation-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-tec-1424579",
@@ -57,7 +58,8 @@ const workshops = [{
   image:banner2,
   heading:"HDFC Mutual Fund Workshop",
   date:"22nd March",
-  mode:"IIIT DELHI, INDIA"
+  mode:"IIIT DELHI, INDIA",
+  time:"TBD"
 }]
 
 
@@ -114,7 +116,8 @@ const events = [{
   image: networkinglounge,
   heading: "NETWORKING LOUNGE",
   date: "21st-22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"TBD"
 },
 {
   link: "https://unstop.com/competitions/rnd-to-venture-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1425806",
@@ -131,28 +134,32 @@ const panel = [{
   image: banner2,
   heading: "SHE.E.O CHRONICALS",
   date: "21st March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"TBD"
 },
 {
   link: "https://unstop.com/conferences/beyond-the-screen-unseen-untold-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit--1425716",
   image: banner2,
   heading: "Beyond the Screen: Unseen & Untold",
   date: "21st March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"TBD"
 },
 {
   link: "https://unstop.com/conferences/vision-to-venture-founders-blueprints-of-success-indraprastha-institute-of-information-technology-iiit-delhi-1425719",
   image: banner2,
   heading: "VISION TO VENTURE: FOUNDERS' BLUEPRINTS OF SUCCESS",
   date: "21st March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"TBD"
 },
 {
   link: "https://unstop.com/conferences/the-y-combinator-effect-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1425697",
   image: banner2,
   heading: "The Y Combinator Effect",
   date: "22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"TBD"
 },]
 
 
@@ -211,7 +218,7 @@ const allEvents = [
     heading: "BIDBUZZ 6.0",
     date: "21st-22nd March",
     mode: "IIIT DELHI, INDIA",
-    time:""
+    time:"TBD"
   },
   {
     link: "https://unstop.com/events/canvas-painting-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1426978",
@@ -226,14 +233,16 @@ const allEvents = [
     image: networknurture,
     heading: "Girl Up: Network & Nurture",
     date: "21st March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"TBD"
   },
   {
     link: "https://unstop.com/competitions/tech-crisis-challenge-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1428494",
     image: techcrisis,
     heading: "Tech Crisis Challenge",
     date: "22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"TBD"
   },
 
   {
@@ -242,27 +251,31 @@ const allEvents = [
     heading: "Echoes of Change",
     date: "22nd March",
     mode: "IIIT DELHI, INDIA",
+    time:"TBD"
   },
   {
     link: "https://unstop.com/quiz/entrevia-family-feud-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1428008",
     image: entrevia,
     heading: "Entrevia: Family Feud",
     date: "21st March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"TBD"
   },
   {
     link: "https://unstop.com/conferences/empowerher-workshop-achieve-inspire-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-i-1428489",
     image: empowerher,
     heading: "EmpowerHer Workshop: Achieve & Inspire",
     date: "22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"TBD"
   },
   {
     link: "https://unstop.com/events/ipl-auction-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1426893",
     image: ipl,
     heading: "IPL Auction",
     date: "21st-22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"TBD"
   },
   {
     link:"https://unstop.com/events/pitch-or-perish-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1433465",
