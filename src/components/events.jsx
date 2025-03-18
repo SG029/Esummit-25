@@ -2,8 +2,9 @@ import React, { useRef, useState } from "react";
 import { SlCalender } from "react-icons/sl";
 import { IoLocationOutline } from "react-icons/io5";
 import "../styles/newevents.css";
+import { RiTimer2Line } from "react-icons/ri";
 
-function EventsContainer({ image, heading, date, mode, link }) {
+function EventsContainer({ image, heading, date, mode, link,time }) {
     const ref = useRef(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
@@ -70,6 +71,8 @@ function EventsContainer({ image, heading, date, mode, link }) {
                     <div className="date flex items-center gap-2 mb-1 justify-center">
                         <SlCalender className="c-amber-200" />
                         <h3 className="c-amber-200">{date}</h3>
+                        <RiTimer2Line/>
+                        <h3 className="c-amber-200">{time}</h3>
                     </div>
                     <div className="flex items-center gap-2 justify-center">
                         <IoLocationOutline className="c-amber-200" />

@@ -1,6 +1,7 @@
 import React from 'react'
 import herobg from "./assets/img/herobg.png";
 import red from "./assets/img/red vector.png";
+import { RiTimer2Line } from "react-icons/ri";
 import EventsContainer from './components/events';
 import banner2 from './assets/img/e1.png';
 import "./styles/newevents.css"
@@ -320,6 +321,7 @@ function Events() {
               heading={event.heading}
               date={event.date}
               mode={event.mode}
+              time={event.time}
             />
           );
         })}
@@ -342,6 +344,7 @@ function Events() {
               heading={event.heading}
               date={event.date}
               mode={event.mode}
+              time={event.time}
             />
           );
         })}
@@ -364,6 +367,7 @@ function Events() {
               heading={event.heading}
               date={event.date}
               mode={event.mode}
+              time={event.time}
             />
           );
         })}
@@ -386,6 +390,7 @@ function Events() {
               heading={event.heading}
               date={event.date}
               mode={event.mode}
+              time={event.time}
             />
           );
         })}
