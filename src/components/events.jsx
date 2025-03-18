@@ -1,12 +1,30 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { SlCalender } from "react-icons/sl";
 import { IoLocationOutline } from "react-icons/io5";
 import "../styles/newevents.css";
+
+// Custom hook to check if the screen is mobile
+function useIsMobile() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize(); // Check on mount
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return isMobile;
+}
 
 function EventsContainer({ image, heading, date, mode, link }) {
     const ref = useRef(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
+    const isMobile = useIsMobile(); // Use the custom hook
 
     const handleMouse = (e) => {
         const { clientX, clientY } = e;
@@ -37,7 +55,7 @@ function EventsContainer({ image, heading, date, mode, link }) {
                 transform: `translate(${x}px, ${y}px)`,
                 transition: "transform 0.2s ease-out",
             }}
-            className="e-container w-[60vh] h-[75vh] cursor-pointer relative overflow-hidden"
+            className="e-container w-[48vh] h-[60vh] cursor-pointer relative overflow-hidden"
         >
             {/* Background Image */}
             <div
@@ -50,12 +68,11 @@ function EventsContainer({ image, heading, date, mode, link }) {
 
             {/* Gradient Overlay */}
             <div
-    className="absolute inset-0"
-    style={{
-        background: "linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0) 80%)",
-    }}
-></div>
-
+                className="absolute inset-0"
+                style={{
+                    background: "linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0) 80%)",
+                }}
+            ></div>
 
             {/* Link Wrapper */}
             <a
@@ -65,15 +82,15 @@ function EventsContainer({ image, heading, date, mode, link }) {
                 className="absolute inset-0 w-full h-full"
             >
                 {/* Text Container at Bottom */}
-                <div className="text-container absolute bottom-0 left-0 right-0 p-4 text-amber-200 text-[1.8vw] font-opensanslight text-center">
-                    <p className="mb-1 font-fonseca">{heading}</p>
+                <div className="text-container absolute bottom-0 left-0 right-0 p-4 text-amber-200 font-opensanslight text-center">
+                    <p className={`mb-1 font-fonseca ${isMobile ? 'text-[8vw]' : 'text-[1.8vw]'}`}>{heading}</p>
                     <div className="date flex items-center gap-2 mb-1 justify-center">
-                        <SlCalender className="c-amber-200" />
-                        <h3 className="c-amber-200">{date}</h3>
+                        <SlCalender className="text-amber-200" />
+                        <h3 className="text-amber-200">{date}</h3>
                     </div>
                     <div className="flex items-center gap-2 justify-center">
-                        <IoLocationOutline className="c-amber-200" />
-                        <h3 className="c-amber-200">{mode}</h3>
+                        <IoLocationOutline className="text-amber-200" />
+                        <h3 className="text-amber-200">{mode}</h3>
                     </div>
                 </div>
             </a>

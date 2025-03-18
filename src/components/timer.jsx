@@ -1,7 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
 
+// Custom hook to check if the screen is mobile
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return isMobile;
+}
+
 const Timer = () => {
+  const isMobile = useIsMobile(); // Use the custom hook
 
   const calculateTimeLeft = () => {
     const eventDate = dayjs('2025-03-21');
@@ -9,14 +27,14 @@ const Timer = () => {
     const difference = eventDate - currentTime;
 
     if (difference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+      return { Days: 0, Hours: 0, Minutes: 0, Seconds: 0 };
     }
 
     return {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / (1000 * 60)) % 60), // Fixed calculation
-      seconds: Math.floor((difference / 1000) % 60),
+      Days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      Hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      Minutes: Math.floor((difference / (1000 * 60)) % 60), // Fixed calculation
+      Seconds: Math.floor((difference / 1000) % 60),
     };
   };
 
@@ -35,10 +53,14 @@ const Timer = () => {
       {Object.entries(timeLeft).map(([unit, value], index) => (
         <div
           key={index}
-          className="text-center border-2 border-white py-3 w-[11vw] rounded-lg bg-black/40 backdrop-blur-md"
+          className="text-center border-2 border-white py-3 w-[20vw] rounded-lg bg-black/40 backdrop-blur-md"
         >
-          <p className="text-2xl">{value}</p>
-          <p className="text-[1.7vw] -mt-[0vw] font-light">{unit}</p>
+          {/* Upper p element */}
+          <p className={`text-2xl ${isMobile ? 'text-[6vw]' : 'text-[5vw]'}`}>{value}</p>
+          {/* Bottom p element */}
+          <p className={`text-[1.7vw] -mt-[0vw] font-light ${isMobile ? 'text-[4vw]' : 'text-[5vw]'}`}>
+            {unit}
+          </p>
         </div>
       ))}
     </div>
