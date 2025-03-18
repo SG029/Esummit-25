@@ -15,6 +15,7 @@ import bluevector from "./assets/img/Vector 2.png"; // Import the bluevector ima
 import bluevector2 from "./assets/img/Vector 2.png"; // Import the bluevector2 image
 import yellowvector from "./assets/img/yellow vector.png"; // Import the yellowvector image
 import redvector from "./assets/img/red vector.png"; // Import the redvector image
+import redvector2 from "./assets/img/red vector.png"; // Import the redvector image
 import Speakerslanding from "./Speakerslanding";
 import Workshops from './Workshops';
 import blue2 from './assets/img/blue2.png'
@@ -203,6 +204,21 @@ function App() {
     }}
   />
 )}
+
+{scrollVh >= 5.3 && (
+  <motion.img
+    src={redvector2}
+    alt=""
+    className="fixed top-[30vh] -left-[20vw] w-[100vw] mt-[10vh] -z-1"
+    style={{
+      height: "calc(130vh + 10vh)",
+      width: "calc(100vw + 10vw)",
+      transform: `translate(${Math.pow((scrollVh - 5.3), 0.3) * 30}vw, ${scrollProgress * -100}vh) rotate(${(scrollVh - 5.1) * 10}deg)`, // Slower movement from left to right
+      opacity: Math.min(1, Math.max(0, (scrollVh - 5.3) * 3)), // Fade in redvector more slowly, ensuring opacity is between 0 and 1
+    }}
+  />
+)}
+
               {/* Magnetic Cursor */}
               <motion.div
                 className="cursorrr fixed pointer-events-none rounded-full bg-[#059196] z-50"
