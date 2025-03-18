@@ -40,14 +40,23 @@ const workshops = [{
   image: filtercopy,
   heading: "FilterCopy Content Creation Workshop",
   date: "22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"12:30-13:30"
 },
 {
   link: "https://unstop.com/workshops-webinars/canva-ai-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1426139",
   image: canva,
   heading: "CANVA AI WORKSHOP",
   date: "21st March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time: "11:30-14:30"
+},
+{
+  link:"https://unstop.com/workshops-webinars/hdfc-mutual-fund-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-1433212",
+  image:banner2,
+  heading:"HDFC Mutual Fund Workshop",
+  date:"22nd March",
+  mode:"IIIT DELHI, INDIA"
 }]
 
 
@@ -56,42 +65,48 @@ const events = [{
   image: hackforimpact,
   heading: "HACK FOR IMPACT",
   date: "21st-22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"10:30-12:00"
 },
 {
   link: "https://unstop.com/competitions/mix-matched-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420155",
   image: mixmatch,
   heading: "MIX-MATCHED",
   date: "21st March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"11:30-15:30"
 },
 {
   link: "https://unstop.com/competitions/scale-up-1-to-100-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1419464",
   image: scaleup,
   heading: "SCALE UP (1 to 100)",
   date: "22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"11:30-14:30"
 },
 {
   link: "https://unstop.com/hackathons/0-to-1-ideathon-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420332",
   image: ideathon,
   heading: "0 TO 1 IDEATHON",
   date: "22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time: "9:00-17:00"
 },
 {
   link: "https://unstop.com/competitions/pitchcafe-80-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420180",
   image: banner2,
   heading: "PITCHCAFE 8.0",
   date: "21st-22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"11:30-15:00 & 10:00-15:00"
 },
 {
   link: "https://unstop.com/competitions/concept-marketing-challenge-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-del-1420328",
   image: conceptmarketing,
   heading: "CONCEPT MARKETING CHALLENGE",
   date: "21st March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"15:30-18:00"
 },
 {
   link: "https://unstop.com/conferences/networking-arena-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1425734",
@@ -105,7 +120,8 @@ const events = [{
   image: rnd,
   heading: "RnD to Venture",
   date: "22nd March",
-  mode: "IIIT DELHI, INDIA"
+  mode: "IIIT DELHI, INDIA",
+  time:"12:00-00:00"
 },]
 
 
@@ -140,42 +156,44 @@ const panel = [{
 
 
 const allEvents = [
-
-
   {
     link: "https://unstop.com/competitions/robosoccer-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1430627",
     image: banner2,
     heading: "ROBOSOCCER",
     date: "22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"14:00-16:00"
   }, {
     link: "https://unstop.com/competitions/line-follower-challenge-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1431258",
     image: banner2,
     heading: "LINE FOLLOWER CHALLENGE",
     date: "22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time: "12:00-14:00"
   },
   {
     link: "https://unstop.com/p/roborace-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1431269",
     image: banner2,
     heading: "ROBORACE",
     date: "22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"16:00-18:00"
   },
-
   {
     link: "https://unstop.com/competitions/line-follower-challenge-for-school-students-e-summit25-iiit-delhi-indraprastha-institute-of-information-tec-1431264",
     image: banner2,
     heading: "LINE FOLLOWER CHALLENGE FOR SCHOOL STUDENTS",
     date: "22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time: "12:00-14:00"
   },
   {
     link: "https://unstop.com/competitions/electroholics-quidditch-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1429180",
     image: quidditch,
     heading: "ELECTROHOLICS QUIDDITCH",
     date: "21st March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"8:30-20:30"
   },
 
   {
@@ -183,24 +201,24 @@ const allEvents = [
     image: banner2,
     heading: "STARTUP FAIR",
     date: "21st-22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time: "both days"
   },
   {
     link: "https://unstop.com/competitions/bidbuzz-60-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1426884",
     image: bidbuzz,
     heading: "BIDBUZZ 6.0",
     date: "21st-22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:""
   },
-
-
-
   {
     link: "https://unstop.com/events/canvas-painting-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1426978",
     image: canvaspainting,
     heading: "CANVAS PAINTING",
     date: "21st March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
+    time:"12:00-16:00"
   },
   {
     link: "https://unstop.com/conferences/girl-up-network-nurture-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1428487",
@@ -222,10 +240,8 @@ const allEvents = [
     image: echoesofchange,
     heading: "Echoes of Change",
     date: "22nd March",
-    mode: "IIIT DELHI, INDIA"
+    mode: "IIIT DELHI, INDIA",
   },
-
-
   {
     link: "https://unstop.com/quiz/entrevia-family-feud-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1428008",
     image: entrevia,
@@ -246,6 +262,14 @@ const allEvents = [
     heading: "IPL Auction",
     date: "21st-22nd March",
     mode: "IIIT DELHI, INDIA"
+  },
+  {
+    link:"https://unstop.com/events/pitch-or-perish-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1433465",
+    image:banner2,
+    heading:"PITCH OR PERISH",
+    date:"22nd March",
+    mode:"IIIT DELHI, INDIA",
+    time:"13:00-14:00"
   }
 ]
 
@@ -367,7 +391,7 @@ function Events() {
         })}
       </div>
       <div>
-        <a href="https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569">
+        <a href="https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569" target='_blank'>
           <div className={`mb-10 relative overflow-hidden group flex items-center gap-0 hover:gap-6 transition-all duration-500 px-6 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[1.7vw] sm:text-[4vw]`}>
             {/* Register Text & Icon */}
             <span className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F] z-10`}>
