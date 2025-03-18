@@ -97,7 +97,6 @@ function Hero() {
       // Calculate scroll progress (0 to 1)
       const progress = scrollY / (documentHeight - windowHeight);
       setScrollProgress(progress);
-
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -115,8 +114,9 @@ function Hero() {
       }}
     >
       {/* Main heading with rising animation */}
+      <div >
       <motion.h1
-        className="main-text text-[16vw] md:text-[12vw] sm:text-[8vw] font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw]"
+        className={`main-text font-mermalede uppercase text-[#E6D7A5] drop-shadow-[5px_-5px_0px_rgba(0,0,0,1)] mt-[2vw] ${isMobile ? 'text-[100 vw]' : 'text-[12vw]'}`} // Increased mobile size to 24vw
         initial={{ y: "20vh", opacity: 1 }} // Start at the center of the screen
         animate={{ y: "00vh", opacity: 1 }} // Rise to the final position
         transition={{ duration: 1.2, ease: "easeOut" }} // Smooth animation
@@ -126,10 +126,11 @@ function Hero() {
       >
         E-SUMMIT 2025
       </motion.h1>
+      </div>
 
       {/* Subheading with typewriter effect */}
       <motion.h2
-        className="font-fonseca uppercase text-[#E6D7A5] font-semibold drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw] text-[3vw]"
+        className={`font-fonseca uppercase text-[#E6D7A5] font-semibold drop-shadow-[5px_-5px_2px_rgba(0,0,0,0.5)] -mt-[2vw] ${isMobile ? 'text-[10vw]' : 'text-[3vw]'}`} // Increased mobile size to 10vw
         initial={{ opacity: 0 }} // Only fade-in effect
         animate={{ opacity: 1 }} // Fade in smoothly
         transition={{ duration: 1, ease: "easeOut", delay: 1.3 }} // Delay after H1
@@ -142,6 +143,7 @@ function Hero() {
 
       {/* Timer component */}
       <motion.div
+      className="flex items-center justify-center"
         style={{
           y: `${scrollProgress * -150}vh`, // Move up based on scroll progress
         }}

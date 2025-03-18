@@ -6,13 +6,32 @@ import logo from "../assets/E-summit logo.png"; // Import the logo image
 import { IoArrowBackOutline } from "react-icons/io5";
 import "../styles/navbar.css";
 
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 786);
+    };
+
+    handleResize(); // Check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+}
+
 function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [buttonPos, setButtonPos] = useState({ x: 0, y: 0 });
   const getWidth = () => window.innerWidth;
 
-  const location = useLocation(); // Get current location
-  const navigate = useNavigate(); // Get navigate function
+  const isMobile = useIsMobile();
+
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -38,21 +57,20 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Scroll to Hero section
   const scrollToHero = () => {
     if (location.pathname !== "/") {
-      navigate("/"); // Navigate to home route if not already there
+      navigate("/");
     }
     setTimeout(() => {
       if (heroRef.current) {
         heroRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Small delay to allow the route change to take effect
+    }, 100);
   };
 
   const scrollToSpeakers = () => {
     if (location.pathname !== "/") {
-      navigate("/"); // Navigate to home route if not already there
+      navigate("/");
     }
     setTimeout(() => {
       if (speakersRef.current) {
@@ -63,7 +81,7 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
 
   const scrollToEvents = () => {
     if (location.pathname !== "/") {
-      navigate("/"); // Navigate to home route if not already there
+      navigate("/");
     }
     setTimeout(() => {
       if (eventsRef.current) {
@@ -74,30 +92,30 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
 
   const scrollToAbout = () => {
     if (location.pathname !== "/") {
-      navigate("/"); // Navigate to home route if not already there
+      navigate("/");
     }
     setTimeout(() => {
       if (aboutRef.current) {
         aboutRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Small delay to allow the route change to take effect
+    }, 100);
   };
 
   const scrollToFooter = () => {
     if (location.pathname !== "/") {
-      navigate("/"); // Navigate to home route if not already there
+      navigate("/");
     }
     setTimeout(() => {
       if (footerRef.current) {
         footerRef.current.scrollIntoView({ behavior: "smooth" });
       }
-    }, 100); // Small delay to allow the route change to take effect
+    }, 100);
   };
 
   return (
-    <nav className="flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full">
+    <nav className="logooo flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full">
       {/* Logo on the left */}
-      <Link to="/"> {/* Link the logo to the home page */}
+      <Link to="/home">
         <img
           src={logo}
           alt={logo}
@@ -149,7 +167,6 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
           )}
         </ul>
         )}
-
                 {/* Magnetic Register Button (Faster Movement) */}
       {isButtonVisible && (
         <motion.button
@@ -157,7 +174,7 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
           onMouseMove={(e) => {
             const { left, top, width, height } = e.target.getBoundingClientRect();
             setButtonPos({
-              x: (mousePos.x - (left + width / 2)) * 0.8, // More movement
+              x: (mousePos.x - (left + width / 2)) * 0.8,
               y: (mousePos.y - (top + height / 2)) * 0.8,
             });
           }}
@@ -168,8 +185,8 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
           }}
           transition={{
             type: "spring",
-            stiffness: 800, // Faster reaction
-            damping: 8, // Less resistance
+            stiffness: 800,
+            damping: 8,
           }}
         >
           <a href="https://forms.gle/SNmEUkdba9jpv9fU6" target="_blank">
@@ -178,6 +195,7 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
         </motion.button>
       )}
 
+      {/* Hamburger Menu */}
       {isHamburgerVisible && (
         <div 
           
