@@ -113,7 +113,7 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
   };
 
   return (
-    <nav className="logooo flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full fixed backdrop-blur-md">
+    <nav className="logooo flex items-center justify-between p-4 text-yellow-50 z-50 w-full fixed backdrop-blur-md">
       {/* Logo on the left */}
       <Link to="/home">
         <img
@@ -131,7 +131,7 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
           }}
           className={`${
             isHamburgerVisible
-              ? "fixed inset-0 flex flex-col items-center justify-center space-y-4 bg-black text-white p-4 z-50"
+              ? "fixed inset-0 flex flex-col items-center justify-center space-y-4 bg-black text-white p-4 z-50 mt-16 backdrop-blur-none"
               : "absolute left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 md:space-x-10"
           } text-sm sm:text-lg md:text-[1.5vw] font-opensanslight transition-colors duration-500 whitespace-nowrap`}
         >
