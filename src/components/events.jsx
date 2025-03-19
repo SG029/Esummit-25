@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from "react";
 import { SlCalender } from "react-icons/sl";
 import { IoLocationOutline } from "react-icons/io5";
 import "../styles/newevents.css";
+import { RiTimer2Line } from "react-icons/ri";
+
 
 // Custom hook to check if the screen is mobile
 function useIsMobile() {
@@ -19,8 +21,8 @@ function useIsMobile() {
 
     return isMobile;
 }
+function EventsContainer({ image, heading, date, mode, link,time }) {
 
-function EventsContainer({ image, heading, date, mode, link }) {
     const ref = useRef(null);
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovered, setIsHovered] = useState(false);
@@ -85,8 +87,12 @@ function EventsContainer({ image, heading, date, mode, link }) {
                 <div className="text-container absolute bottom-0 left-0 right-0 p-4 text-amber-200 font-opensanslight text-center">
                     <p className={`mb-1 font-fonseca ${isMobile ? 'text-[8vw]' : 'text-[1.8vw]'}`}>{heading}</p>
                     <div className="date flex items-center gap-2 mb-1 justify-center">
-                        <SlCalender className="text-amber-200" />
-                        <h3 className="text-amber-200">{date}</h3>
+
+                        <SlCalender className="c-amber-200" />
+                        <h3 className="c-amber-200">{date}</h3>
+                        <RiTimer2Line/>
+                        <h3 className="c-amber-200">{time}</h3>
+
                     </div>
                     <div className="flex items-center gap-2 justify-center">
                         <IoLocationOutline className="text-amber-200" />

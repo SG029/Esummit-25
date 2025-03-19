@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import logo from "../assets/E-summit logo.png";
-
+import { Link, useLocation, useNavigate } from "react-router-dom"; // Import useLocation and useNavigate
+import logo from "../assets/E-summit logo.png"; // Import the logo image
+import { IoArrowBackOutline } from "react-icons/io5";
+import "../styles/navbar.css";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,7 +21,6 @@ function useIsMobile() {
 
   return isMobile;
 }
-
 
 function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -43,7 +43,7 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
 
   const [isButtonVisible, setIsButtonVisible] = useState(true);
   const [isHamburgerVisible, setIsHamburgerVisible] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -119,41 +119,55 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
         <img
           src={logo}
           alt={logo}
-          className={` ml-6 cursor-pointer  ${isMobile ? 'h-[13vw]' : 'h-[5vw]'}`}
-        />
-      </Link>
-
-      {/* Centered Navigation Links */}
-      {isMenuOpen && (
+          className="h-12 sm:h-14 md:h-16 cursor-pointer"
+            // Add cursor-pointer for better UX
+          />
+          </Link>
+          {isMenuOpen && (
         <ul
+          style={{
+            transition: "all 0.5s ease in-out",
+            fontSize: "1.5rem",
+          }}
           className={`${
             isHamburgerVisible
-              ? "absolute left-1/2 transform -translate-x-1/2 mt-55 w-50 flex flex-col items-center space-y-4 bg-white text-black p-4 rounded-md shadow-lg"
+              ? "fixed inset-0 flex flex-col items-center justify-center space-y-4 bg-black text-white p-4 z-50"
               : "absolute left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 md:space-x-10"
           } text-sm sm:text-lg md:text-[1.5vw] font-opensanslight transition-colors duration-500 whitespace-nowrap`}
         >
-          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToHero}>
+          <li className="nav-bar cursor-pointer hover:text-[#059196]" onClick={scrollToHero}>
             Home
           </li>
-          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToAbout}>
+          <li className="nav-bar cursor-pointer hover:text-[#059196]" onClick={scrollToAbout}>
             About
           </li>
-          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToEvents}>
+          <li className="nav-bar cursor-pointer hover:text-[#059196]" onClick={scrollToEvents}>
             Events
           </li>
-          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToSpeakers}>
-            Speakers
+          <li className="nav-bar cursor-pointer hover:text-[#059196]" onClick={scrollToSpeakers}>
+            Speakers {/* Use Link for navigation */}
           </li>
-          <li className="cursor-pointer hover:text-[#059196]">
-            <Link to="/sponsors">Sponsors</Link>
+          <li className="nav-bar cursor-pointer hover:text-[#059196]" onClick={scrollToFooter}>
+          Contact Us
           </li>
-          <li className="cursor-pointer hover:text-[#059196]" onClick={scrollToFooter}>
-            Contact Us
-          </li>
-        </ul>
-      )}
+          {!isButtonVisible && (
 
-      {/* Magnetic Register Button */}
+            <div>
+            <IoArrowBackOutline style={{
+              color: "#059196",
+              fontSize: "1.5rem",
+              cursor: "pointer",
+              transition: "transform 0.3s ease-in-out"
+            }} 
+            onClick={() => setIsMenuOpen(false)}
+            onMouseEnter={(e) => e.currentTarget.style.transform = "scale(1.5)"}
+            onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
+            />
+            </div>
+          )}
+        </ul>
+        )}
+                {/* Magnetic Register Button (Faster Movement) */}
       {isButtonVisible && (
         <motion.button
           className="font-['Inter'] font-bold bg-[#AA1E0F] text-white px-4 py-2 sm:px-5 sm:py-2 md:px-6 md:py-2 rounded-md mr-4 sm:mr-5 md:mr-6 hover:bg-[#fff] hover:text-black transition-all"
@@ -183,7 +197,9 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
 
       {/* Hamburger Menu */}
       {isHamburgerVisible && (
-        <div onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div 
+          
+        onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? (
             <RxCross2 className="text-3xl sm:text-4xl mr-4 sm:mr-5 md:mr-6" />
           ) : (

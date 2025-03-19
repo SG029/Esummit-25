@@ -1,0 +1,7 @@
+.nav-bar {
+    transition: text-decoration 0.3s ease;
+}
+
+.nav-bar:hover {
+    text-decoration: underline;
+}

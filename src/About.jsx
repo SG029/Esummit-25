@@ -56,6 +56,7 @@ function About() {
           <span>ABOUT </span>  
           <span className={`${isMobile ? 'text-[#059196]' : 'text-black'}`}>E-SUMMIT</span>
         </h1>
+
         <h3 className={`w-5/6 text-[2.5vw] text-center font-opensanslight leading-10 about-text ${isMobile ? 'text-amber-200' : 'text-black'}`}>
           E-Summit is the flagship entrepreneurship summit organized to promote innovation, entrepreneurship, and leadership among students and professionals.
         </h3>

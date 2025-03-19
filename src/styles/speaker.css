@@ -1,7 +1,3 @@
-/* Existing CSS */
-.speaker-div {
-    /* Your existing styles for .speaker-div */
-}
 
 /* Media query for screens up to 1600px */
 @media (max-width: 1600px) {
@@ -23,7 +19,6 @@
 
     /* Set font size of <h3> to 8vw in phone view */
     .about-text {
-        font-size: 8vw;
         text-align: center;
     }
 }

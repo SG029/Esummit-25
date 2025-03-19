@@ -33,21 +33,21 @@ const workshops = [{
   link: "https://unstop.com/workshops-webinars/drone-workshop-your-first-drone-venture-e-summit25-iiit-delhi-indraprastha-institute-of-information-t-1424650",
   image: drone,
   heading: "Drone Workshop",
-  date: "21st March",
+  date: "21-03-2025",
   mode: "IIIT DELHI, INDIA"
 },
 {
   link: "https://unstop.com/workshops-webinars/filter-copy-content-creation-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-tec-1424579",
   image: filtercopy,
   heading: "FilterCopy Content Creation Workshop",
-  date: "22nd March",
+  date: "22-03-2025",
   mode: "IIIT DELHI, INDIA"
 },
 {
   link: "https://unstop.com/workshops-webinars/canva-ai-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1426139",
   image: canva,
   heading: "CANVA AI WORKSHOP",
-  date: "21st March",
+  date: "21-03-2025",
   mode: "IIIT DELHI, INDIA"
 }]
 
