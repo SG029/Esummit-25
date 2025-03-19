@@ -65,6 +65,9 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
       if (heroRef.current) {
         heroRef.current.scrollIntoView({ behavior: "smooth" });
       }
+      if (isMobile){
+        setIsMenuOpen(false);
+      }
     }, 100);
   };
 
@@ -75,6 +78,9 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
     setTimeout(() => {
       if (speakersRef.current) {
         speakersRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+      if (isMobile){
+        setIsMenuOpen(false);
       }
     }, 100);
   };
@@ -87,6 +93,9 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
       if (eventsRef.current) {
         eventsRef.current.scrollIntoView({ behavior: "smooth" });
       }
+      if (isMobile){
+        setIsMenuOpen(false);
+      }
     }, 100);
   };
 
@@ -98,10 +107,14 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
       if (aboutRef.current) {
         aboutRef.current.scrollIntoView({ behavior: "smooth" });
       }
+      if (isMobile){
+        setIsMenuOpen(false);
+      }
     }, 100);
   };
 
   const scrollToFooter = () => {
+    isMenuOpen(false);
     if (location.pathname !== "/") {
       navigate("/");
     }
@@ -109,17 +122,20 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
       if (footerRef.current) {
         footerRef.current.scrollIntoView({ behavior: "smooth" });
       }
+      if (isMobile){
+        setIsMenuOpen(false);
+      }
     }, 100);
   };
 
   return (
-    <nav className="logooo flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full fixed backdrop-blur-md">
+    <nav className="logooo flex items-center justify-between p-4 text-yellow-50 z-50 absolute w-full bg-black fixed opacity-70">
       {/* Logo on the left */}
       <Link to="/home">
         <img
           src={logo}
           alt={logo}
-          className="h-8 sm:h-14 md:h-10 cursor-pointer"
+          className="h-10 sm:h-14 md:h-12 cursor-pointer"
             // Add cursor-pointer for better UX
           />
           </Link>
@@ -132,7 +148,7 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
           className={`${
             isHamburgerVisible
               ? "fixed inset-0 flex flex-col items-center justify-center space-y-4 bg-black text-white p-4 z-50"
-              : "absolute left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 md:space-x-10"
+              : "fixed left-1/2 transform -translate-x-1/2 flex space-x-4 sm:space-x-6 md:space-x-10"
           } text-sm sm:text-lg md:text-[1.5vw] font-opensanslight transition-colors duration-500 whitespace-nowrap`}
         >
           <li className="nav-bar cursor-pointer hover:text-[#059196]" onClick={scrollToHero}>
