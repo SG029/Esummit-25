@@ -308,6 +308,9 @@ function useIsMobile() {
 
 function Events() {
   const isMobile = useIsMobile();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]); // Trigger when the path changes
 
   return (
     <div
