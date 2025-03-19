@@ -74,7 +74,7 @@ function Speakerslanding() {
 
   return (
     <div
-      className="w-full min-h-[100vh] flex flex-col items-center justify-center about-container"
+      className="w-full min-h-[100%] flex flex-col items-center justify-center about-container"
       style={{
         backgroundImage: `url(${herobg})`,
         backgroundSize: "cover",
@@ -100,7 +100,7 @@ function Speakerslanding() {
       </motion.div>
 
       {/* Marquee Section */}
-      <div className="marquee h-[55vh] w-full mt-[10vh] flex justify-center gap-[3vw] overflow-hidden">
+      <div className="marquee h-[65vh] w-full mt-[10vh] flex justify-center gap-[3vw] overflow-hidden pb-20">
         {/* First marquee-inner */}
         <div className="marquee-inner flex gap-[3vw]">
           {speakers.map((speaker, index) => (
