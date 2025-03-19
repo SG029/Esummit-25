@@ -414,7 +414,7 @@ function Events() {
         <a href="https://unstop.com/college-fests/e-summit25-iiit-delhi-iiit-delhi-345569" target='_blank'>
           <div className={`mb-10 relative overflow-hidden group flex items-center gap-0 hover:gap-6 transition-all duration-500 px-6 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[1.7vw] sm:text-[4vw]`}>
             {/* Register Text & Icon */}
-            <span className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F] z-10`}>
+            <span className={`relative transition-all duration-1000 group-hover:text-[#AA1E0F]  z-10`}>
               <img className='w-20' src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/branding-guidelines/logos/white/Unstop-Logo-White-Small.png" alt="unstop" />
             </span>
             <BiChevronRight className={`relative z-10 ${isMobile ? 'text-[8vw]' : 'text-[3vw]'} md:text-[3vw] sm:text-[5vw]`} />

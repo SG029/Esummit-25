@@ -4,16 +4,41 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import SpeakerCard from "./components/SpeakerCard.jsx";
 import "../src/styles/Speakerslanding.css";
+import { BiChevronRight } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
+
+// Import images
 import ayush from "./assets/img/Ayush Sapra.jpg";
 import bipin from "./assets/img/Bipin Preet Singh.jpg";
 import sandeep from "./assets/img/sandeepjain.jpg";
 import neerav from "./assets/img/neerav.jpg";
 import akshit from "./assets/img/akshit.jpg";
-import anugreh from "./assets/img/anugreh.jpg";
+import anas from "./assets/img/anas.jpg";
 import natwar from "./assets/img/natwar.jpg";
-import smit from "./assets/img/smit.jpg";
-import { BiChevronRight } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
+import chitra from "./assets/img/chitra.jpg";
+import anup from "./assets/img/anup.png";
+import dcpandey from "./assets/img/dcpandey.jpg";
+import deepak from "./assets/img/deepak.jpg";
+import himanshu from "./assets/img/himanshu.webp";
+// import kartik from "./assets/img/kartik.jpg";
+
+// Speaker data
+const speakers = [
+  { image: ayush, name: "AAYUSH SAPRA", designation: "Food Content Creator", className: "mt-[10vh]" },
+  { image: bipin, name: "BIPIN PREET SINGH", designation: "Founder of MobiKwik", className: "mb-0" },
+  { image: sandeep, name: "SANDEEP JAIN", designation: "Founder of GeeksforGeeks", className: "mt-[10vh]" },
+  { image: neerav, name: "NEERAV JAIN", designation: "Founder & CEO of CityFurnish", className: "mb-0" },
+  { image: akshit, name: "AKSHIT BANSAL", designation: "Co-Founder of Statiq", className: "mt-[10vh]" },
+  { image: anas, name: "MUHAMMAD ANAS", designation: "Founder & CEO of Enord", className: "mb-0" },
+  { image: natwar, name: "NATWAR AGRAWAL", designation: "Founder, and Director of Bucca Bucci", className: "mt-[10vh]" },
+  { image: anup, name: "ANUP GUPTA", designation: "Founder OF MathonGO", className: "mb-0" },
+  { image: chitra, name: "CHITRA GURNANI ", designation: "CEO at Thrillophilia.com", className: "mt-[10vh]" },
+  { image: dcpandey, name: "DC PANDEY ", designation: "Renowned Physics Teacher", className: "mb-0" },
+  { image: deepak, name: "DEEPAK SOLANKI ", designation: "CEO at Thrillophilia.com", className: "mt-[10vh]" },
+  { image: himanshu, name: "HIMANSHU ", designation: "Founder and CEO of Cograd", className: "mb-0" },
+  // { image: kartik, name: "KARTIK KRISHNAN ", designation: "Director at @filtercopy ", className: "mt-[10vh]" },
+
+];
 
 // useIsMobile Hook
 function useIsMobile() {
@@ -33,7 +58,6 @@ function useIsMobile() {
 }
 
 function Speakerslanding() {
-  
   const isMobile = useIsMobile();
   const [ref1, inView1] = useInView({
     triggerOnce: true, // Trigger animation only once
@@ -79,106 +103,28 @@ function Speakerslanding() {
       <div className="marquee h-[55vh] w-full mt-[10vh] flex justify-center gap-[3vw] overflow-hidden">
         {/* First marquee-inner */}
         <div className="marquee-inner flex gap-[3vw]">
-          <SpeakerCard
-            backgroundImage={ayush}
-            speakerName="AYUSH SAPRA"
-            speakerDesignation="Food Content Creator"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={bipin}
-            speakerName="BIPIN PREET SINGH"
-            speakerDesignation="Founder of MobiKwik"
-            className="mb-0"
-          />
-          <SpeakerCard
-            backgroundImage={sandeep}
-            speakerName="SANDEEP JAIN"
-            speakerDesignation="Founder of GeeksforGeeks"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={neerav}
-            speakerName="NEERAV JAIN"
-            speakerDesignation="Founder & CEO of CityFurnish"
-            className="mb-0"
-          />
-          <SpeakerCard
-            backgroundImage={akshit}
-            speakerName="AKSHIT BANSAL"
-            speakerDesignation="Co-Founder of Statiq"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={anugreh}
-            speakerName="ANUGREH"
-            speakerDesignation="Heading Serenico Labs"
-            className="mb-0"
-          />
-          <SpeakerCard
-            backgroundImage={natwar}
-            speakerName="NATWAR AGRAWAL"
-            speakerDesignation="Founder, and Director of Bucca Bucci"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={smit}
-            speakerName="SMIT GADA"
-            speakerDesignation="Founder OF Bluer"
-            className="mb-0"
-          />
+          {speakers.map((speaker, index) => (
+            <SpeakerCard
+              key={index}
+              backgroundImage={speaker.image}
+              speakerName={speaker.name}
+              speakerDesignation={speaker.designation}
+              className={speaker.className}
+            />
+          ))}
         </div>
 
         {/* Second marquee-inner (duplicate for seamless looping) */}
         <div className="marquee-inner flex gap-[3vw]">
-          <SpeakerCard
-            backgroundImage={ayush}
-            speakerName="AYUSH SAPRA"
-            speakerDesignation="Food Content Creator"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={bipin}
-            speakerName="BIPIN PREET SINGH"
-            speakerDesignation="Founder of MobiKwik"
-            className="mb-0"
-          />
-          <SpeakerCard
-            backgroundImage={sandeep}
-            speakerName="SANDEEP JAIN"
-            speakerDesignation="Founder of GeeksforGeeks"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={neerav}
-            speakerName="NEERAV JAIN"
-            speakerDesignation="Founder & CEO of CityFurnish"
-            className="mb-0"
-          />
-          <SpeakerCard
-            backgroundImage={akshit}
-            speakerName="AKSHIT BANSAL"
-            speakerDesignation="Co-Founder of Statiq"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={anugreh}
-            speakerName="ANUGREH"
-            speakerDesignation="Heading Serenico Labs"
-            className="mb-0"
-          />
-          <SpeakerCard
-            backgroundImage={natwar}
-            speakerName="NATWAR AGRAWAL"
-            speakerDesignation="Founder, and Director of Bucca Bucci"
-            className="mt-[10vh]"
-          />
-          <SpeakerCard
-            backgroundImage={smit}
-            speakerName="SMIT GADA"
-            speakerDesignation="Founder OF Bluer"
-            className="mb-0"
-          />
+          {speakers.map((speaker, index) => (
+            <SpeakerCard
+              key={`duplicate-${index}`} // Unique key for duplicates
+              backgroundImage={speaker.image}
+              speakerName={speaker.name}
+              speakerDesignation={speaker.designation}
+              className={speaker.className}
+            />
+          ))}
         </div>
       </div>
 
@@ -203,7 +149,7 @@ function Speakerslanding() {
             />
           </div>
         </div>
-        </div>
+      </div>
     </div>
   );
 }
