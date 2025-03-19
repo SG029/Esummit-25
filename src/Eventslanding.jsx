@@ -54,7 +54,7 @@ const allEvents = [{
 },
 {
   link:"https://unstop.com/workshops-webinars/hdfc-mutual-fund-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-1433212",
-  image:banner2,
+  image:"https://instagram.fdel29-1.fna.fbcdn.net/v/t51.2885-15/485491649_17950535795944391_7493629068241690525_n.jpg?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmY3NTc2MS5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fdel29-1.fna.fbcdn.net&_nc_cat=111&_nc_oc=Q6cZ2QE2850tSW6Xwtq_NPFPBTi8nZiWwYvQQz67gxogScGSh4_ct4zq0noIs8QMHusjAuU&_nc_ohc=goD5orGK8dIQ7kNvgEOqcUL&_nc_gid=0WVmcdvbqgZtyaKgEvPg1w&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzU5MTU0NzU1OTczODQ1MzgwMw%3D%3D.3-ccb7-5&oh=00_AYG32zAw-KEnO7eVEL7UVZn3p7kx6CGhDYaX1s2Sxxgs3A&oe=67E051AF&_nc_sid=7a9f4b",
   heading:"HDFC Mutual Fund Workshop",
   date:"22-03-2025",
   mode:"IIIT DELHI, INDIA",

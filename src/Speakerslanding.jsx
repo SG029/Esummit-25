@@ -74,7 +74,7 @@ function Speakerslanding() {
 
   return (
     <div
-      className="w-full min-h-[100vh] flex flex-col items-center justify-center about-container"
+      className="w-full min-h-[100%] flex flex-col items-center justify-center about-container"
       style={{
         backgroundImage: `url(${herobg})`,
         backgroundSize: "cover",
@@ -100,7 +100,7 @@ function Speakerslanding() {
       </motion.div>
 
       {/* Marquee Section */}
-      <div className="marquee h-[55vh] w-full mt-[10vh] flex justify-center gap-[3vw] overflow-hidden">
+      <div className="marquee h-[65vh] w-full mt-[10vh] flex justify-center gap-[3vw] overflow-hidden pb-20">
         {/* First marquee-inner */}
         <div className="marquee-inner flex gap-[3vw]">
           {speakers.map((speaker, index) => (
@@ -134,7 +134,7 @@ function Speakerslanding() {
           onClick={() => navigate("/speakers")} // Navigate to the speakers page
           className="no-underline cursor-pointer"
         >
-          <div className={`relative overflow-hidden group flex items-center gap-0 hover:gap-6 transition-all duration-1000 px-6 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[1.7vw] sm:text-[4vw]`}>
+          <div className={`relative overflow-hidden group flex items-center gap-0 hover:gap-6 transition-all duration-1000 px-4 py-2 bg-[#AA1E0F] rounded-xl text-white cursor-pointer ${isMobile ? 'text-[6vw] mt-[6vw]' : 'text-[2vw] mt-[3vw]'} md:text-[1.7vw] sm:text-[4vw]`}>
             {/* Animated Overlay */}
             <div className="absolute inset-0 bg-white rounded-full h-[30vw] w-[40vw] transform -translate-x-full translate-y-0 transition-all duration-[700ms] group-hover:translate-x-[-40%] group-hover:translate-y-[-40%]"></div>
 

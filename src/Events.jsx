@@ -27,6 +27,8 @@ import echoesofchange from './assets/img/echoesofchange.png'
 import entrevia from './assets/img/entrevia.png'
 import empowerher from './assets/img/empowerher.png'
 import ipl from './assets/img/ipl auction.png'
+import hdfc from './assets/img/hdfc.jpg'
+import pitchcafe from './assets/img/pitchcafe.jpeg'
 
 
 const workshops = [{
@@ -55,7 +57,7 @@ const workshops = [{
 },
 {
   link:"https://unstop.com/workshops-webinars/hdfc-mutual-fund-workshop-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-1433212",
-  image:banner2,
+  image:hdfc,
   heading:"HDFC Mutual Fund Workshop",
   date:"22-03-2025",
   mode:"IIIT DELHI, INDIA",
@@ -97,7 +99,7 @@ const events = [{
 },
 {
   link: "https://unstop.com/competitions/pitchcafe-80-e-summit25-iiit-delhi-indraprastha-institute-of-information-technology-iiit-delhi-1420180",
-  image: banner2,
+  image: pitchcafe,
   heading: "PITCHCAFE 8.0",
   date: "21st-22-03-2025",
   mode: "IIIT DELHI, INDIA",

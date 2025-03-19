@@ -113,13 +113,13 @@ function Navbar({ heroRef, aboutRef, speakersRef, eventsRef, footerRef }) {
   };
 
   return (
-    <nav className="logooo flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full">
+    <nav className="logooo flex items-center justify-between p-4 text-yellow-50 z-50 bg-transparent absolute w-full fixed backdrop-blur-md">
       {/* Logo on the left */}
       <Link to="/home">
         <img
           src={logo}
           alt={logo}
-          className="h-12 sm:h-14 md:h-16 cursor-pointer"
+          className="h-8 sm:h-14 md:h-10 cursor-pointer"
             // Add cursor-pointer for better UX
           />
           </Link>
