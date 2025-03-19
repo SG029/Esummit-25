@@ -1,3 +1,8 @@
+/* .speakers-headdd{
+
+} */
+
+
 
 /* Media query for screens up to 1600px */
 @media (max-width: 1600px) {
@@ -21,4 +26,7 @@
     .about-text {
         text-align: center;
     }
+    /* .speakers-divvv{
+        font-size: 
+    } */
 }

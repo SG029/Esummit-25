@@ -9,7 +9,7 @@ const SpeakerCard = ({
 }) => {
   return (
     <div
-      className={`speaker-div w-[20vw] h-[100%] rounded-3xl shadow-xl shadow-[#000]/70 bg-cover bg-center bg-no-repeat ${className}`} // Add dynamic className
+      className={`speaker-div w-[20vw] h-[50vh] rounded-3xl shadow-xl shadow-[#000]/70 bg-cover bg-center bg-no-repeat ${className}`} // Add dynamic className
       style={{ backgroundImage: `url(${backgroundImage})` }} // Dynamic background image
     >
       {/* Overlay with gradient */}
@@ -20,10 +20,10 @@ const SpeakerCard = ({
             "linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 70%)", // Gradient from black to transparent
         }}
       >
-        <h3 className="text-3xl font-fonseca font-bold text-[#FFEBA9] ml-[1vw] mb-0 tracking-wide">
+        <h3 className="text-3xl font-fonseca font-bold text-[#FFEBA9] ml-[30px] mb-0 tracking-wide">
           {speakerName} {/* Dynamic speaker name */}
         </h3>
-        <h3 className="text-md font-opensanslight text-[#FFEBA9] ml-[1vw] mb-3 -mt-2 tracking-normal">
+        <h3 className="text-md font-opensanslight text-[#FFEBA9] ml-[30px] mb-3 -mt-2 tracking-normal">
           {speakerDesignation} {/* Dynamic speaker designation */}
         </h3>
       </div>
