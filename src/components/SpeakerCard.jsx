@@ -23,7 +23,7 @@ const SpeakerCard = ({
         <h3 className="text-3xl font-fonseca font-bold text-[#FFEBA9] ml-[1vw] mb-0">
           {speakerName} {/* Dynamic speaker name */}
         </h3>
-        <h3 className="text-md font-opensanslight text-[#FFEBA9] ml-[1vw] mb-3 -mt-2">
+        <h3 className="text-md font-opensanslight text-[#FFEBA9] ml-[1vw] mb-3 -mt-2 tracking-normal">
           {speakerDesignation} {/* Dynamic speaker designation */}
         </h3>
       </div>
