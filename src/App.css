@@ -4,6 +4,16 @@
   }     
 }
 
+body::-webkit-scrollbar{
+  display: block;
+  width: 8px;
+  background-color: #dc2626;   
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #E6D7A5;
+  border-radius: 50px;
+}
+
 .rise-animation {
   position: absolute;
   top: 50%; /* Start at the middle of the screen */
