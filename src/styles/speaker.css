@@ -1,11 +1,24 @@
-@media (max-width:1600px){
-    .speaker-div{
+
+/* Media query for screens up to 1600px */
+@media (max-width: 1600px) {
+    .speaker-div {
         min-width: 30vh;
     }
 }
 
-@media (max-width: 768px){
-    .speaker-div{
+/* Media query for screens up to 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .speaker-div {
         min-width: 27vh;
+    }
+
+    /* Set font size of <h1> to 12vw in phone view */
+    .speak-head {
+        font-size: 12vw;
+    }
+
+    /* Set font size of <h3> to 8vw in phone view */
+    .about-text {
+        text-align: center;
     }
 }

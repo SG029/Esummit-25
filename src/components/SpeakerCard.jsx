@@ -20,7 +20,7 @@ const SpeakerCard = ({
             "linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 70%)", // Gradient from black to transparent
         }}
       >
-        <h3 className="text-3xl font-fonseca text-[#FFEBA9] ml-[1vw] mb-0">
+        <h3 className="text-3xl font-fonseca font-bold text-[#FFEBA9] ml-[1vw] mb-0">
           {speakerName} {/* Dynamic speaker name */}
         </h3>
         <h3 className="text-md font-opensanslight text-[#FFEBA9] ml-[1vw] mb-3 -mt-2">

@@ -1,12 +1,20 @@
 @media (max-width: 768px){
     .main-text{
-        font-size: 10vh;
+        font-size: 15vh;
+        text-wrap: wrap;
+        text-align: center;
+        line-height:30vw;
+        margin-bottom: 2VW;
     }
 
     .sub-main{
-        font-size: 2vh;
+        font-size: 4vh;
+        text-wrap: wrap;
+        margin-top: 5vw;
+
     }
-    .cursor-pointer{
-        display:none;
+    .cursor-pointerrr{
+        display: none;
     }
+    
 }

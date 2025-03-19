@@ -1,11 +1,13 @@
-/* Existing CSS */
 .event-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
     row-gap: 3vw; /* Vertical gap between rows */
     column-gap: 3vw; /* Horizontal gap between columns */
-    margin-left: 80px;
-    margin-bottom: 25px;
+    justify-content: center; /* Center the grid horizontally */
+    margin: 0 auto; /* Center the container itself on the x-axis */
+    margin-bottom: 25px; /* Bottom margin */
+    width: 90%; /* Adjust width to fit within the parent */
+    max-width: 1200px; /* Optional: Set a max-width for larger screens */
 }
 
 .e-container {
@@ -50,18 +52,10 @@
     opacity: 1; /* Show text on hover */
 }
 
-/* Text Styling */
-.text-amber-200 {
-    color: #FFEBA9; /* Yellow text color */
-}
-
 /* Responsive Design */
 @media (min-width: 768px) and (max-width: 1169px) {
     .event-container {
         grid-template-columns: 1fr 1fr;
-    }
-    .e-text {
-        color: #FFEBA9; /* Yellow text color */
     }
 }
 
@@ -71,13 +65,23 @@
         margin-right: 30px;
         margin-left: 30px;
     }
-    .e-text {
-        color: #FFEBA9; /* Yellow text color */
+
+    /* Set font size of <p> to 10vw in phone view */
+    .paraaa {
+        font-size: 7vw;
     }
+    .headdd{
+        font-size: 13vw;
+    }
+
     .e-back {
         padding-top: 6rem;
     }
-    .e-container{
+
+    .e-container {
         width: 100%;
+    }
+    .events-head{
+        font-size: 15vw;
     }
 }
