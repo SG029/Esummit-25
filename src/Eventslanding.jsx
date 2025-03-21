@@ -325,7 +325,7 @@ function Eventslanding() {
             
               <div className='event-container mt-10'>
                 {allEvents.map((events) => {
-                  if (events.time.split("-")[0] <= dayjs().format('HH:MM') && events.time.split("-")[1] >= dayjs().format('HH:MM') /*&& events.date === dayjs().format('DD-MM-YYYY')*/) { //uncommet for the date to be in affect
+                  if (events.time.split("-")[0] <= dayjs().format('HH:MM') && events.time.split("-")[1] >= dayjs().format('HH:MM') && events.date === dayjs().format('DD-MM-YYYY')) { //uncommet for the date to be in affect
                     return <EventsContainer {...events} key={events.heading} />
                   }
                 })}
